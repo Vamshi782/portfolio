@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coursework - Vamshi Krishna Korutla</title>
+    <title>Academic Journey - Vamshi Krishna Korutla</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 100&quot;><text y=&quot;0.9em&quot; font-size=&quot;45&quot;>VK</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='45'>🎓</text></svg>">
     <style>
         :root {
-            --primary-color: #2d46b9;
-            --secondary-color: #1e38a3;
-            --accent-color: #4ce0d2;
-            --biotech-green: #00d084;
-            --biotech-purple: #8b5cf6;
-            --data-orange: #ff6b35;
-            --neural-blue: #3b82f6;
-            --light-color: #f8f9fa;
-            --dark-color: #212529;
-            --text-color: #495057;
-            --gradient-primary: linear-gradient(135deg, #2d46b9 0%, #4ce0d2 100%);
-            --gradient-secondary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-tertiary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --gradient-quaternary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --gradient-quinary: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-            --gradient-biotech: linear-gradient(135deg, #00d084 0%, #8b5cf6 100%);
-            --gradient-neural: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-            --gradient-data: linear-gradient(135deg, #ff6b35 0%, #f59e0b 100%);
-            --gradient-ml: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+            /* Primary Colors */
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #43e97b;
+            --success: #00f2fe;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-accent: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-warning: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             --gradient-ai: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-            --box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-            --box-shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.25);
-            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --gradient-ml: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+            --gradient-data: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            --gradient-cloud: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+            
+            /* Neutral Colors */
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light: #f8fafc;
+            --white: #ffffff;
+            
+            /* Effects */
+            --shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            --shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.25);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             --glass-bg: rgba(255, 255, 255, 0.1);
             --glass-border: rgba(255, 255, 255, 0.2);
         }
@@ -43,21 +46,15 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #8b5cf6 70%, #00d084 100%);
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #8b5cf6 60%, #43e97b 100%);
             min-height: 100vh;
-            color: var(--text-color);
+            color: var(--dark);
             overflow-x: hidden;
             position: relative;
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Enhanced Animated Background */
+        /* Enhanced Background Animation */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -68,486 +65,257 @@
             overflow: hidden;
         }
 
-        .floating-shapes {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .shape {
+        .floating-shape {
             position: absolute;
             border-radius: 50%;
-            animation: float 20s infinite linear;
+            animation: float 25s infinite ease-in-out;
+            opacity: 0.3;
+            filter: blur(60px);
         }
 
-        .shape:nth-child(1) { 
-            width: 120px; height: 120px; 
-            background: radial-gradient(circle, rgba(76, 224, 210, 0.3), rgba(76, 224, 210, 0.1));
-            top: 10%; left: 10%; animation-delay: 0s; 
+        .floating-shape:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(67, 233, 123, 0.4), transparent);
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
         }
-        .shape:nth-child(2) { 
-            width: 80px; height: 80px; 
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.3), rgba(139, 92, 246, 0.1));
-            top: 70%; left: 80%; animation-delay: -5s; 
+
+        .floating-shape:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.4), transparent);
+            top: 60%;
+            right: 10%;
+            animation-delay: -8s;
         }
-        .shape:nth-child(3) { 
-            width: 140px; height: 140px; 
-            background: radial-gradient(circle, rgba(0, 208, 132, 0.3), rgba(0, 208, 132, 0.1));
-            top: 40%; left: 70%; animation-delay: -10s; 
-        }
-        .shape:nth-child(4) { 
-            width: 60px; height: 60px; 
-            background: radial-gradient(circle, rgba(255, 107, 53, 0.3), rgba(255, 107, 53, 0.1));
-            top: 80%; left: 20%; animation-delay: -15s; 
-        }
-        .shape:nth-child(5) { 
-            width: 100px; height: 100px; 
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.3), rgba(59, 130, 246, 0.1));
-            top: 20%; left: 50%; animation-delay: -8s; 
+
+        .floating-shape:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(240, 147, 251, 0.4), transparent);
+            bottom: 10%;
+            left: 50%;
+            animation-delay: -16s;
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-            25% { transform: translateY(-30px) rotate(90deg) scale(1.1); }
-            50% { transform: translateY(-20px) rotate(180deg) scale(0.9); }
-            75% { transform: translateY(-40px) rotate(270deg) scale(1.05); }
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(30px, -30px) scale(1.1);
+            }
+            50% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+            75% {
+                transform: translate(20px, 30px) scale(1.05);
+            }
         }
 
-        /* Profile Picture */
-        .profile-container {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            z-index: 10;
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
         }
 
-        .profile-picture {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: var(--gradient-biotech);
-            padding: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .profile-picture:hover {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
-        }
-
-        .profile-img {
-            width: 124px;
-            height: 124px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center;
-            background: white;
-            display: block;
-        }
-
-        /* Enhanced Header */
+        /* Header Section */
         .header {
-            text-align: center;
-            padding: 80px 0 40px;
+            padding: 60px 0 40px;
             position: relative;
         }
 
-        .back-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
+        .back-button {
             display: inline-flex;
             align-items: center;
-            padding: 15px 30px;
-            background: var(--glass-bg);
+            gap: 12px;
+            padding: 14px 28px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
             color: white;
             text-decoration: none;
-            border-radius: 50px;
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            transition: var(--transition);
             font-weight: 600;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            font-size: 15px;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 40px;
         }
 
-        .back-btn:hover {
+        .back-button:hover {
             background: rgba(255, 255, 255, 0.25);
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .back-btn i {
-            margin-right: 10px;
-            font-size: 16px;
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
-        .header-title {
-            font-size: 56px;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 25px;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        .profile-image-wrapper {
             position: relative;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .profile-glow {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: var(--gradient-accent);
+            border-radius: 50%;
+            filter: blur(30px);
+            opacity: 0.5;
+            z-index: -1;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .page-title {
+            font-size: 56px;
+            font-weight: 900;
+            font-family: 'Space Grotesk', sans-serif;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             letter-spacing: -1px;
         }
 
-        .header-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 6px;
-            background: var(--gradient-biotech);
-            border-radius: 3px;
-            box-shadow: 0 4px 15px rgba(76, 224, 210, 0.5);
-        }
-
-        .header-subtitle {
-            font-size: 22px;
+        .page-subtitle {
+            font-size: 20px;
             color: rgba(255, 255, 255, 0.95);
-            max-width: 800px;
-            margin: 0 auto 30px;
             line-height: 1.7;
-            font-weight: 400;
-        }
-
-        .specialization-tags {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-
-        .spec-tag {
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 14px;
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .spec-tag.biotech {
-            background: var(--glass-bg);
-            color: white;
-            border-color: rgba(0, 208, 132, 0.5);
-        }
-
-        .spec-tag.data-science {
-            background: var(--glass-bg);
-            color: white;
-            border-color: rgba(59, 130, 246, 0.5);
-        }
-
-        .spec-tag.ml {
-            background: var(--glass-bg);
-            color: white;
-            border-color: rgba(139, 92, 246, 0.5);
-        }
-
-        .spec-tag:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            margin-bottom: 25px;
         }
 
         .university-badge {
             display: inline-flex;
             align-items: center;
-            padding: 15px 30px;
-            background: var(--glass-bg);
+            gap: 12px;
+            padding: 12px 28px;
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50px;
             color: white;
-            border: 1px solid var(--glass-border);
+            font-weight: 700;
+            font-size: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .specialization-tags {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .spec-tag {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            border-radius: 50px;
+            color: white;
             font-weight: 600;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            font-size: 14px;
+            transition: var(--transition);
         }
 
-        .university-badge i {
-            margin-right: 12px;
-            font-size: 20px;
+        .spec-tag:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
         }
 
-        /* Enhanced Course Grid */
-        .courses-section {
-            padding: 60px 0;
-            position: relative;
-        }
-
-        .courses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .course-card {
+        /* Progress Section */
+        .progress-section {
+            margin: 50px 0;
+            padding: 40px;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            box-shadow: var(--shadow);
         }
 
-        .course-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            border-radius: 20px 20px 0 0;
-            transition: var(--transition);
-        }
-
-        .course-card:nth-child(1)::before { background: var(--gradient-primary); }
-        .course-card:nth-child(2)::before { background: var(--gradient-secondary); }
-        .course-card:nth-child(3)::before { background: var(--gradient-tertiary); }
-        .course-card:nth-child(4)::before { background: var(--gradient-quaternary); }
-        .course-card:nth-child(5)::before { background: var(--gradient-quinary); }
-        .course-card:nth-child(6)::before { background: var(--gradient-biotech); }
-        .course-card:nth-child(7)::before { background: var(--gradient-neural); }
-        .course-card:nth-child(8)::before { background: var(--gradient-data); }
-        .course-card:nth-child(9)::before { background: var(--gradient-ml); }
-        .course-card:nth-child(10)::before { background: var(--gradient-ai); }
-
-        .course-card:hover {
-            transform: translateY(-8px) scale(1.01);
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .course-card:hover::before {
-            height: 100%;
-            opacity: 0.08;
-        }
-
-        .course-header {
+        .progress-header {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 18px;
-        }
-
-        .course-icon {
-            width: 55px;
-            height: 55px;
-            border-radius: 12px;
-            display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            color: white;
-            margin-right: 18px;
-            flex-shrink: 0;
-            transition: var(--transition);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-        }
-
-        .course-card:nth-child(1) .course-icon { background: var(--gradient-primary); }
-        .course-card:nth-child(2) .course-icon { background: var(--gradient-secondary); }
-        .course-card:nth-child(3) .course-icon { background: var(--gradient-tertiary); }
-        .course-card:nth-child(4) .course-icon { background: var(--gradient-quaternary); }
-        .course-card:nth-child(5) .course-icon { background: var(--gradient-quinary); }
-        .course-card:nth-child(6) .course-icon { background: var(--gradient-biotech); }
-        .course-card:nth-child(7) .course-icon { background: var(--gradient-neural); }
-        .course-card:nth-child(8) .course-icon { background: var(--gradient-data); }
-        .course-card:nth-child(9) .course-icon { background: var(--gradient-ml); }
-        .course-card:nth-child(10) .course-icon { background: var(--gradient-ai); }
-
-        .course-card:hover .course-icon {
-            transform: scale(1.1) rotate(8deg);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-        }
-
-        .course-info {
-            flex: 1;
-        }
-
-        .course-number {
-            display: inline-block;
-            padding: 4px 12px;
-            background: rgba(45, 70, 185, 0.12);
-            color: var(--primary-color);
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            font-family: 'JetBrains Mono', monospace;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .course-title {
-            font-size: 19px;
-            font-weight: 700;
-            color: var(--dark-color);
-            margin-bottom: 12px;
-            line-height: 1.3;
-            letter-spacing: -0.3px;
-        }
-
-        .course-description {
-            color: var(--text-color);
-            line-height: 1.6;
-            margin-bottom: 18px;
-            font-size: 13px;
-        }
-
-        .course-highlights {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 15px;
-        }
-
-        .highlight-tag {
-            padding: 6px 12px;
-            background: rgba(76, 224, 210, 0.12);
-            color: var(--primary-color);
-            border-radius: 15px;
-            font-size: 10px;
-            font-weight: 600;
-            transition: var(--transition);
-            border: 1px solid rgba(76, 224, 210, 0.2);
-        }
-
-        .highlight-tag:hover {
-            background: rgba(76, 224, 210, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .course-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 700;
-            transition: var(--transition);
-            padding: 8px 0;
-            font-size: 13px;
-        }
-
-        .course-link:hover {
-            color: var(--secondary-color);
-            transform: translateX(8px);
-        }
-
-        .course-link i {
-            margin-left: 10px;
-            transition: var(--transition);
-        }
-
-        .course-link:hover i {
-            transform: translateX(5px);
-        }
-
-        .status-badge {
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 9px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            backdrop-filter: blur(10px);
-        }
-
-        .status-completed {
-            background: rgba(67, 233, 123, 0.25);
-            color: #1b5e20;
-            border: 1px solid rgba(67, 233, 123, 0.4);
-        }
-
-        .status-current {
-            background: rgba(255, 193, 7, 0.25);
-            color: #ef6c00;
-            border: 1px solid rgba(255, 193, 7, 0.4);
-        }
-
-        /* Enhanced Presentation Section */
-        .presentation-section {
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .presentation-container {
-            position: relative;
-            display: inline-block;
-        }
-
-        .presentation-image {
-            max-width: 600px;
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
-            transition: var(--transition);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .presentation-image:hover {
-            transform: translateY(-5px) scale(1.01);
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Enhanced Progress Section */
-        .progress-section {
-            margin-top: 80px;
-            text-align: center;
-            padding: 50px 0;
+            margin-bottom: 30px;
         }
 
         .progress-title {
             font-size: 32px;
             font-weight: 800;
-            color: white;
-            margin-bottom: 40px;
-            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--dark);
         }
 
-        .progress-container {
-            max-width: 600px;
-            margin: 0 auto;
+        .progress-percentage {
+            font-size: 48px;
+            font-weight: 900;
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .progress-bar {
-            background: rgba(255, 255, 255, 0.2);
-            height: 16px;
-            border-radius: 12px;
+        .progress-bar-container {
+            height: 20px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 50px;
             overflow: hidden;
             position: relative;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
         }
 
-        .progress-fill {
+        .progress-bar-fill {
             height: 100%;
-            background: var(--gradient-biotech);
-            width: 80%;
-            border-radius: 12px;
+            background: var(--gradient-accent);
+            width: 95%;
+            border-radius: 50px;
             position: relative;
-            animation: progressAnimation 3s ease-out;
-            box-shadow: 0 0 20px rgba(0, 208, 132, 0.5);
+            animation: progressAnimation 2s ease-out;
+            box-shadow: 0 0 20px rgba(67, 233, 123, 0.5);
         }
 
-        .progress-fill::after {
+        .progress-bar-fill::after {
             content: '';
             position: absolute;
             top: 0;
@@ -555,12 +323,12 @@
             right: 0;
             bottom: 0;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-            animation: shimmer 2.5s infinite;
+            animation: shimmer 2s infinite;
         }
 
         @keyframes progressAnimation {
             from { width: 0%; }
-            to { width: 80%; }
+            to { width: 95%; }
         }
 
         @keyframes shimmer {
@@ -568,200 +336,539 @@
             100% { transform: translateX(100%); }
         }
 
-        .progress-text {
-            color: white;
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: 600;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .stats-grid {
+        .progress-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
 
-        .stat-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 25px;
+        .stat-box {
             text-align: center;
-            border: 1px solid var(--glass-border);
-            transition: var(--transition);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            border-radius: 15px;
         }
 
         .stat-number {
-            font-size: 32px;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 8px;
+            font-size: 36px;
+            font-weight: 900;
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .stat-label {
+            font-size: 13px;
+            color: var(--gray);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Courses Section */
+        .courses-section {
+            margin: 60px 0;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: 800;
+            font-family: 'Space Grotesk', sans-serif;
+            color: white;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            font-size: 18px;
             color: rgba(255, 255, 255, 0.9);
-            font-weight: 500;
-            font-size: 14px;
+            line-height: 1.7;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-title {
-                font-size: 42px;
-            }
-
-            .courses-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            .course-card {
-                padding: 30px;
-            }
-
-            .course-header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .course-icon {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-
-            .back-btn {
-                position: static;
-                margin-bottom: 30px;
-            }
-
-            .profile-container {
-                position: static;
-                text-align: center;
-                margin-bottom: 20px;
-            }
-
-            .presentation-image {
-                max-width: 95%;
-            }
-
-            .specialization-tags {
-                justify-content: center;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
         }
 
-        /* Animation delays for staggered entrance */
-        .course-card:nth-child(1) { animation: slideInUp 0.8s ease-out 0.1s both; }
-        .course-card:nth-child(2) { animation: slideInUp 0.8s ease-out 0.2s both; }
-        .course-card:nth-child(3) { animation: slideInUp 0.8s ease-out 0.3s both; }
-        .course-card:nth-child(4) { animation: slideInUp 0.8s ease-out 0.4s both; }
-        .course-card:nth-child(5) { animation: slideInUp 0.8s ease-out 0.5s both; }
-        .course-card:nth-child(6) { animation: slideInUp 0.8s ease-out 0.6s both; }
-        .course-card:nth-child(7) { animation: slideInUp 0.8s ease-out 0.7s both; }
-        .course-card:nth-child(8) { animation: slideInUp 0.8s ease-out 0.8s both; }
-        .course-card:nth-child(9) { animation: slideInUp 0.8s ease-out 0.9s both; }
-        .course-card:nth-child(10) { animation: slideInUp 0.8s ease-out 1.0s both; }
+        .course-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 35px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            opacity: 0;
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+
+        .course-card:nth-child(1) { animation-delay: 0.1s; }
+        .course-card:nth-child(2) { animation-delay: 0.2s; }
+        .course-card:nth-child(3) { animation-delay: 0.3s; }
+        .course-card:nth-child(4) { animation-delay: 0.4s; }
+        .course-card:nth-child(5) { animation-delay: 0.5s; }
+        .course-card:nth-child(6) { animation-delay: 0.6s; }
+        .course-card:nth-child(7) { animation-delay: 0.7s; }
+        .course-card:nth-child(8) { animation-delay: 0.8s; }
+        .course-card:nth-child(9) { animation-delay: 0.9s; }
+        .course-card:nth-child(10) { animation-delay: 1.0s; }
+        .course-card:nth-child(11) { animation-delay: 1.1s; }
+        .course-card:nth-child(12) { animation-delay: 1.2s; }
+        .course-card:nth-child(13) { animation-delay: 1.3s; }
+        .course-card:nth-child(14) { animation-delay: 1.4s; }
 
         @keyframes slideInUp {
             from {
                 opacity: 0;
-                transform: translateY(60px) scale(0.95);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
-                transform: translateY(0) scale(1);
+                transform: translateY(0);
             }
         }
 
-        /* Glowing effects */
-        .glow {
-            position: relative;
-        }
-
-        .glow::after {
+        .course-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            border-radius: inherit;
-            padding: 2px;
-            background: var(--gradient-biotech);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: xor;
-            opacity: 0;
+            height: 5px;
             transition: var(--transition);
         }
 
-        .course-card:hover.glow::after {
-            opacity: 0.7;
+        .course-card:nth-child(1)::before { background: var(--gradient-primary); }
+        .course-card:nth-child(2)::before { background: var(--gradient-success); }
+        .course-card:nth-child(3)::before { background: var(--gradient-warning); }
+        .course-card:nth-child(4)::before { background: var(--gradient-accent); }
+        .course-card:nth-child(5)::before { background: var(--gradient-cloud); }
+        .course-card:nth-child(6)::before { background: var(--gradient-data); }
+        .course-card:nth-child(7)::before { background: var(--gradient-ml); }
+        .course-card:nth-child(8)::before { background: var(--gradient-ai); }
+        .course-card:nth-child(9)::before { background: var(--gradient-primary); }
+        .course-card:nth-child(10)::before { background: var(--gradient-success); }
+        .course-card:nth-child(11)::before { background: var(--gradient-ai); }
+        .course-card:nth-child(12)::before { background: var(--gradient-accent); }
+        .course-card:nth-child(13)::before { background: var(--gradient-cloud); }
+        .course-card:nth-child(14)::before { background: var(--gradient-ml); }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary);
+        }
+
+        .course-card:hover::before {
+            height: 100%;
+            opacity: 0.05;
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-completed {
+            background: rgba(67, 233, 123, 0.2);
+            color: #1b5e20;
+            border: 2px solid rgba(67, 233, 123, 0.5);
+        }
+
+        .status-current {
+            background: rgba(245, 158, 11, 0.2);
+            color: #d97706;
+            border: 2px solid rgba(245, 158, 11, 0.5);
+        }
+
+        .course-header {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .course-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+        }
+
+        .course-card:nth-child(1) .course-icon { background: var(--gradient-primary); }
+        .course-card:nth-child(2) .course-icon { background: var(--gradient-success); }
+        .course-card:nth-child(3) .course-icon { background: var(--gradient-warning); }
+        .course-card:nth-child(4) .course-icon { background: var(--gradient-accent); }
+        .course-card:nth-child(5) .course-icon { background: var(--gradient-cloud); }
+        .course-card:nth-child(6) .course-icon { background: var(--gradient-data); }
+        .course-card:nth-child(7) .course-icon { background: var(--gradient-ml); }
+        .course-card:nth-child(8) .course-icon { background: var(--gradient-ai); }
+        .course-card:nth-child(9) .course-icon { background: var(--gradient-primary); }
+        .course-card:nth-child(10) .course-icon { background: var(--gradient-success); }
+        .course-card:nth-child(11) .course-icon { background: var(--gradient-ai); }
+        .course-card:nth-child(12) .course-icon { background: var(--gradient-accent); }
+        .course-card:nth-child(13) .course-icon { background: var(--gradient-cloud); }
+        .course-card:nth-child(14) .course-icon { background: var(--gradient-ml); }
+
+        .course-card:hover .course-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .course-info {
+            flex: 1;
+        }
+
+        .course-code {
+            display: inline-block;
+            padding: 5px 14px;
+            background: rgba(102, 126, 234, 0.1);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .course-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .course-description {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .course-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-tag {
+            padding: 6px 14px;
+            background: rgba(102, 126, 234, 0.1);
+            color: var(--primary);
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: var(--transition);
+        }
+
+        .highlight-tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .course-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .course-link:hover {
+            color: var(--secondary);
+            gap: 12px;
+        }
+
+        /* Photo Gallery Section */
+        .gallery-section {
+            margin: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background: white;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .gallery-image-wrapper {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-caption {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .gallery-content {
+            padding: 25px;
+        }
+
+        .gallery-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .gallery-description {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            border: 2px dashed rgba(102, 126, 234, 0.3);
+        }
+
+        .photo-placeholder i {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+
+        .photo-placeholder-text {
+            font-size: 14px;
+            color: var(--gray);
+            text-align: center;
+            max-width: 250px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .page-title {
+                font-size: 42px;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .page-title {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .course-card {
+                padding: 25px;
+            }
+
+            .progress-header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Background Animation -->
     <div class="bg-animation">
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-        </div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
     </div>
 
     <div class="container">
-<div class="profile-container">
-    <div class="profile-picture">
-        <img src="https://i.postimg.cc/XNdVmmJJ/vamshi-beach-image.jpg" alt="Vamshi Krishna Korutla" class="profile-img">
-    </div>
-</div>
+        <!-- Header -->
         <div class="header">
-            <a href="index.html" class="back-btn">
+            <a href="index.html" class="back-button">
                 <i class="fas fa-arrow-left"></i>
-                Back to Portfolio
+                <span>Back to Portfolio</span>
             </a>
-            <h1 class="header-title">Academic Excellence</h1>
-            <p class="header-subtitle">
-                Master's in Data Analytics with specialized focus on biotech applications, machine learning, and predictive modeling. Bridging the gap between cutting-edge data science and life sciences innovation.
-            </p>
-            <div class="specialization-tags">
-                <span class="spec-tag biotech">🧬 Biotech Analytics</span>
-                <span class="spec-tag data-science">📊 Data Science</span>
-                <span class="spec-tag ml">🤖 Machine Learning</span>
-            </div>
-            <div class="university-badge">
-                <i class="fas fa-university"></i>
-                Northeastern University, Portland, ME
+
+            <div class="profile-section">
+                <div class="profile-image-wrapper">
+                    <div class="profile-glow"></div>
+                    <img src="https://i.postimg.cc/XNdVmmJJ/vamshi-beach-image.jpg" alt="Vamshi Krishna Korutla" class="profile-image">
+                </div>
+                <div class="profile-info">
+                    <h1 class="page-title">Academic Excellence</h1>
+                    <p class="page-subtitle">
+                        Master's in Data Analytics Engineering with specialized focus on healthcare analytics, machine learning, and AI systems. Combining rigorous academic training with real-world industry projects to drive innovation in data science.
+                    </p>
+                    <div class="university-badge">
+                        <i class="fas fa-university"></i>
+                        <span>Northeastern University, Portland, ME</span>
+                    </div>
+                    <div class="specialization-tags">
+                        <span class="spec-tag">🧬 Healthcare Analytics</span>
+                        <span class="spec-tag">📊 Data Science</span>
+                        <span class="spec-tag">🤖 Machine Learning</span>
+                        <span class="spec-tag">🚀 AI Systems</span>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- Progress Section -->
+        <div class="progress-section">
+            <div class="progress-header">
+                <h2 class="progress-title">Program Completion</h2>
+                <div class="progress-percentage">95%</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill"></div>
+            </div>
+            <p style="text-align: center; color: var(--gray); font-weight: 600; margin-bottom: 20px;">
+                Expected Graduation: June 2026
+            </p>
+            <div class="progress-stats">
+                <div class="stat-box">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Courses Completed</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">3.8</div>
+                    <div class="stat-label">GPA</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">In Progress</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Capstone Remaining</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Courses Section -->
         <div class="courses-section">
+            <div class="section-header">
+                <h2 class="section-title">Comprehensive Coursework</h2>
+                <p class="section-description">
+                    Advanced curriculum combining theoretical foundations with practical applications in data science, machine learning, and business analytics
+                </p>
+            </div>
+
             <div class="courses-grid">
-                <div class="course-card glow">
+                <!-- Course 1 -->
+                <div class="course-card">
                     <div class="status-badge status-completed">Completed</div>
                     <div class="course-header">
                         <div class="course-icon">
                             <i class="fab fa-r-project"></i>
                         </div>
                         <div class="course-info">
-                            <span class="course-number">Course 1</span>
+                            <span class="course-code">COURSE 1</span>
                             <h3 class="course-title">Introduction to Analytics (R)</h3>
                         </div>
                     </div>
                     <p class="course-description">
-                        Gained comprehensive knowledge in analytics using R programming, covering data wrangling, exploratory data analysis, statistical modeling, and visualization techniques essential for biotech research.
+                        Comprehensive foundation in analytics using R programming. Mastered data wrangling, exploratory data analysis, statistical modeling, and advanced visualization techniques essential for biotech and healthcare research applications.
                     </p>
                     <div class="course-highlights">
                         <span class="highlight-tag">R Programming</span>
@@ -769,187 +876,197 @@
                         <span class="highlight-tag">EDA</span>
                         <span class="highlight-tag">Statistical Modeling</span>
                         <span class="highlight-tag">ggplot2</span>
+                        <span class="highlight-tag">dplyr</span>
                     </div>
                 </div>
 
-                <div class="course-card glow">
+                <!-- Course 2 -->
+                <div class="course-card">
                     <div class="status-badge status-completed">Completed</div>
                     <div class="course-header">
                         <div class="course-icon">
                             <i class="fas fa-database"></i>
                         </div>
                         <div class="course-info">
-                            <span class="course-number">Course 2</span>
+                            <span class="course-code">COURSE 2</span>
                             <h3 class="course-title">Database Management Systems</h3>
                         </div>
                     </div>
                     <p class="course-description">
-                        Collaborated on a real-world project with a clinic in New Jersey, analyzing sleep health data using advanced SQL techniques to explore correlations between sleep patterns and health metrics.
+                        Real-world healthcare project with New Jersey clinic analyzing sleep health data. Applied advanced SQL techniques, database design principles, and data mining to explore correlations between sleep patterns and health outcomes.
                     </p>
                     <div class="course-highlights">
                         <span class="highlight-tag">SQL Advanced</span>
                         <span class="highlight-tag">Healthcare Data</span>
-                        <span class="highlight-tag">Team Project</span>
+                        <span class="highlight-tag">Database Design</span>
                         <span class="highlight-tag">Clinical Analytics</span>
                         <span class="highlight-tag">Data Mining</span>
                     </div>
                 </div>
 
-                <div class="course-card glow">
+                <!-- Course 3 -->
+                <div class="course-card">
                     <div class="status-badge status-completed">Completed</div>
                     <div class="course-header">
                         <div class="course-icon">
                             <i class="fas fa-chart-bar"></i>
                         </div>
                         <div class="course-info">
-                            <span class="course-number">Course 3</span>
+                            <span class="course-code">COURSE 3</span>
                             <h3 class="course-title">Probability Theory and Statistics</h3>
                         </div>
                     </div>
                     <p class="course-description">
-                        Strengthened statistical foundations including probability distributions, sampling theory, central limit theorem, hypothesis testing, and confidence intervals for robust biostatistical analysis.
+                        Deep dive into statistical foundations including probability distributions, sampling theory, central limit theorem, hypothesis testing, and confidence intervals for robust biostatistical analysis and research design.
                     </p>
                     <div class="course-highlights">
-                        <span class="highlight-tag">Probability</span>
+                        <span class="highlight-tag">Probability Theory</span>
                         <span class="highlight-tag">Hypothesis Testing</span>
                         <span class="highlight-tag">Biostatistics</span>
                         <span class="highlight-tag">Statistical Inference</span>
-                        <span class="highlight-tag">Central Limit Theorem</span>
+                        <span class="highlight-tag">CLT</span>
                     </div>
                 </div>
 
-                <div class="course-card glow">
+                <!-- Course 4 -->
+                <div class="course-card">
                     <div class="status-badge status-completed">Completed</div>
                     <div class="course-header">
                         <div class="course-icon">
                             <i class="fas fa-calculator"></i>
                         </div>
                         <div class="course-info">
-                            <span class="course-number">Course 4</span>
+                            <span class="course-code">COURSE 4</span>
                             <h3 class="course-title">Intermediate Analytics</h3>
                         </div>
                     </div>
                     <p class="course-description">
-                        Advanced statistical modeling including multiple regression, ANOVA, chi-square testing, and model selection techniques for sophisticated data-driven decision making in research environments.
+                        Advanced statistical modeling techniques including multiple regression, ANOVA, chi-square testing, and sophisticated model selection methods for data-driven decision making in research and clinical environments.
                     </p>
                     <div class="course-highlights">
                         <span class="highlight-tag">Regression Analysis</span>
                         <span class="highlight-tag">ANOVA</span>
                         <span class="highlight-tag">Model Selection</span>
                         <span class="highlight-tag">Advanced Statistics</span>
-                        <span class="highlight-tag">Research Methods</span>
+                        <span class="highlight-tag">Research Design</span>
                     </div>
                 </div>
 
-                <div class="course-card glow">
+                <!-- Course 5 -->
+                <div class="course-card">
                     <div class="status-badge status-completed">Completed</div>
                     <div class="course-header">
                         <div class="course-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <div class="course-info">
-                            <span class="course-number">Course 5</span>
+                            <span class="course-code">COURSE 5</span>
                             <h3 class="course-title">Communication and Visualization</h3>
                         </div>
                     </div>
                     <p class="course-description">
-                        Team collaboration analyzing Netflix streaming data, creating interactive dashboards and compelling visualizations using Tableau and Python to communicate complex insights to stakeholders effectively.
+                        Team leadership analyzing Netflix streaming data. Created interactive dashboards and compelling visualizations using Tableau, Power BI, and Python to effectively communicate complex insights to diverse stakeholders.
                     </p>
                     <div class="course-highlights">
                         <span class="highlight-tag">Tableau</span>
-                        <span class="highlight-tag">Data Storytelling</span>
-                        <span class="highlight-tag">Python Viz</span>
                         <span class="highlight-tag">Power BI</span>
-                        <span class="highlight-tag">Netflix Analysis</span>
-                        <span class="highlight-tag">Team Leadership</span>
+                        <span class="highlight-tag">Data Storytelling</span>
+                        <span class="highlight-tag">Python Visualization</span>
+                        <span class="highlight-tag">Dashboard Design</span>
                     </div>
                 </div>
 
-                <div class="course-card glow">
+                <!-- Course 6 -->
+                <div class="course-card">
                     <div class="status-badge status-completed">Completed</div>
                     <div class="course-header">
                         <div class="course-icon">
                             <i class="fas fa-building"></i>
                         </div>
                         <div class="course-info">
-                            <span class="course-number">Course 6</span>
+                            <span class="course-code">COURSE 6</span>
                             <h3 class="course-title">Introduction to Enterprise Analytics</h3>
                         </div>
                     </div>
                     <p class="course-description">
-                        Extensive use of Microsoft Excel for business analytics, including pivot tables, scenario analysis, and sophisticated data models for enterprise-level decision making in biotech and pharmaceutical industries.
+                        Extensive Microsoft Excel training for business analytics. Mastered advanced techniques including pivot tables, scenario analysis, VBA automation, and sophisticated financial models for enterprise-level decision making.
                     </p>
                     <div class="course-highlights">
                         <span class="highlight-tag">Excel Advanced</span>
                         <span class="highlight-tag">Business Intelligence</span>
-                        <span class="highlight-tag">Pivot Tables</span>
-                        <span class="highlight-tag">Enterprise Solutions</span>
                         <span class="highlight-tag">Financial Modeling</span>
+                        <span class="highlight-tag">Pivot Tables</span>
+                        <span class="highlight-tag">VBA</span>
                     </div>
                 </div>
 
-                <div class="course-card glow">
+                <!-- Course 7 -->
+                <div class="course-card">
                     <div class="status-badge status-completed">Completed</div>
                     <div class="course-header">
                         <div class="course-icon">
                             <i class="fab fa-python"></i>
                         </div>
                         <div class="course-info">
-                            <span class="course-number">Course 7</span>
+                            <span class="course-code">COURSE 7</span>
                             <h3 class="course-title">Python and Analytics Technology</h3>
                         </div>
                     </div>
                     <p class="course-description">
-                        Developed machine learning classification models in Python, including a comprehensive predictive model for diabetes diagnosis using advanced ML algorithms and data preprocessing techniques.
+                        Developed comprehensive machine learning classification models for healthcare applications. Built predictive model for diabetes diagnosis achieving 94% accuracy using advanced ML algorithms and feature engineering.
                     </p>
                     <div class="course-highlights">
                         <span class="highlight-tag">Python</span>
                         <span class="highlight-tag">Machine Learning</span>
                         <span class="highlight-tag">Healthcare ML</span>
-                        <span class="highlight-tag">Predictive Modeling</span>
                         <span class="highlight-tag">scikit-learn</span>
+                        <span class="highlight-tag">Feature Engineering</span>
                     </div>
                     <a href="https://github.com/Vamshi782/diabetes-prediction-ml-project" target="_blank" class="course-link">
-                        View GitHub Project <i class="fas fa-external-link-alt"></i>
+                        <i class="fab fa-github"></i>
+                        View Project on GitHub
+                        <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <div class="course-card glow">
+                <!-- Course 8 -->
+                <div class="course-card">
                     <div class="status-badge status-completed">Completed</div>
                     <div class="course-header">
                         <div class="course-icon">
                             <i class="fas fa-microchip"></i>
                         </div>
                         <div class="course-info">
-                            <span class="course-number">Course 8</span>
+                            <span class="course-code">COURSE 8</span>
                             <h3 class="course-title">Data Mining Applications</h3>
                         </div>
                     </div>
                     <p class="course-description">
-                        Working with large-scale Yelp datasets, implementing advanced analytics, real-time dashboards, and AI-powered insights for business intelligence and predictive analytics in service industries.
+                        Large-scale big data analytics using Yelp dataset. Implemented advanced data mining techniques, real-time dashboards, AI-powered insights, and NLP for business intelligence and predictive analytics.
                     </p>
                     <div class="course-highlights">
                         <span class="highlight-tag">Big Data</span>
-                        <span class="highlight-tag">Yelp Dataset</span>
+                        <span class="highlight-tag">Data Mining</span>
                         <span class="highlight-tag">AI Integration</span>
                         <span class="highlight-tag">Real-time Analytics</span>
                         <span class="highlight-tag">NLP</span>
                     </div>
                 </div>
 
-                <div class="course-card glow">
+                <!-- Course 9 -->
+                <div class="course-card">
                     <div class="status-badge status-completed">Completed</div>
                     <div class="course-header">
                         <div class="course-icon">
                             <i class="fas fa-dna"></i>
                         </div>
                         <div class="course-info">
-                            <span class="course-number">Course 9</span>
+                            <span class="course-code">COURSE 9</span>
                             <h3 class="course-title">Experiential Learning Project</h3>
                         </div>
                     </div>
                     <p class="course-description">
-                        12-week intensive collaboration with Wyman's Blueberries (major US producer) on market analytics and product strategy for new protein blend launch, applying comprehensive business analytics to agricultural biotechnology.
+                        12-week industry collaboration with Wyman's (major US blueberry producer) on market analytics and product strategy for new protein blend launch. Applied comprehensive business analytics to agricultural biotechnology.
                     </p>
                     <div class="course-highlights">
                         <span class="highlight-tag">Industry Partnership</span>
@@ -960,65 +1077,293 @@
                     </div>
                 </div>
 
-                <div class="course-card glow">
+                <!-- Course 10 -->
+                <div class="course-card">
                     <div class="status-badge status-completed">Completed</div>
                     <div class="course-header">
                         <div class="course-icon">
                             <i class="fas fa-brain"></i>
                         </div>
                         <div class="course-info">
-                            <span class="course-number">Course 10</span>
+                            <span class="course-code">COURSE 10</span>
                             <h3 class="course-title">Predictive Analytics & Machine Learning</h3>
                         </div>
                     </div>
                     <p class="course-description">
-                        Advanced predictive modeling course focusing on building and evaluating machine learning models. Weekly hands-on projects covering regression techniques, classification algorithms, model selection, and performance optimization for biotech applications.
+                        Advanced predictive modeling course with weekly hands-on projects. Mastered regression techniques, classification algorithms, ensemble methods, model selection, hyperparameter tuning, and performance optimization for biotech applications.
                     </p>
                     <div class="course-highlights">
                         <span class="highlight-tag">Linear Regression</span>
                         <span class="highlight-tag">Logistic Regression</span>
                         <span class="highlight-tag">K-NN Algorithm</span>
                         <span class="highlight-tag">Model Evaluation</span>
-                        <span class="highlight-tag">Feature Selection</span>
                         <span class="highlight-tag">Cross-Validation</span>
-                        <span class="highlight-tag">Biotech ML</span>
-                        <span class="highlight-tag">R & Python</span>
+                        <span class="highlight-tag">Feature Selection</span>
+                    </div>
+                </div>
+
+                <!-- Course 11 - NEW -->
+                <div class="course-card">
+                    <div class="status-badge status-completed">Completed</div>
+                    <div class="course-header">
+                        <div class="course-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="course-info">
+                            <span class="course-code">COURSE 11</span>
+                            <h3 class="course-title">Fundamentals of Artificial Intelligence</h3>
+                        </div>
+                    </div>
+                    <p class="course-description">
+                        Comprehensive study of AI systems architecture and intelligent agent design. Deep understanding of how AI systems perceive, reason, and act through sensors and actuators. Explored multiple agent architectures including simple reflex agents, model-based reflex agents, goal-based agents, utility-based agents, and learning agents. Covered search algorithms, knowledge representation, planning systems, and machine learning foundations for building intelligent systems.
+                    </p>
+                    <div class="course-highlights">
+                        <span class="highlight-tag">Intelligent Agents</span>
+                        <span class="highlight-tag">Reflex Agents</span>
+                        <span class="highlight-tag">Model-Based Agents</span>
+                        <span class="highlight-tag">Goal-Based Agents</span>
+                        <span class="highlight-tag">Utility Agents</span>
+                        <span class="highlight-tag">Learning Agents</span>
+                        <span class="highlight-tag">Search Algorithms</span>
+                        <span class="highlight-tag">AI Architecture</span>
+                    </div>
+                </div>
+
+                <!-- Course 12 - NEW -->
+                <div class="course-card">
+                    <div class="status-badge status-completed">Completed</div>
+                    <div class="course-header">
+                        <div class="course-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="course-info">
+                            <span class="course-code">COURSE 12</span>
+                            <h3 class="course-title">Data Governance and Responsible AI</h3>
+                        </div>
+                    </div>
+                    <p class="course-description">
+                        Critical examination of ethical AI implementation, data privacy regulations, and governance frameworks. Studied GDPR, HIPAA compliance, bias detection and mitigation, fairness in ML models, explainable AI, and responsible data stewardship in healthcare and enterprise contexts.
+                    </p>
+                    <div class="course-highlights">
+                        <span class="highlight-tag">AI Ethics</span>
+                        <span class="highlight-tag">Data Privacy</span>
+                        <span class="highlight-tag">GDPR</span>
+                        <span class="highlight-tag">HIPAA</span>
+                        <span class="highlight-tag">Bias Mitigation</span>
+                        <span class="highlight-tag">Explainable AI</span>
+                        <span class="highlight-tag">Governance Frameworks</span>
+                    </div>
+                </div>
+
+                <!-- Course 13 - NEW -->
+                <div class="course-card">
+                    <div class="status-badge status-current">In Progress</div>
+                    <div class="course-header">
+                        <div class="course-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="course-info">
+                            <span class="course-code">COURSE 13</span>
+                            <h3 class="course-title">Data Management and Big Data</h3>
+                        </div>
+                    </div>
+                    <p class="course-description">
+                        Advanced big data technologies and distributed computing frameworks. Working with Hadoop ecosystem, Spark for large-scale data processing, NoSQL databases, data lakes, cloud data warehousing, and scalable ETL pipelines for enterprise analytics.
+                    </p>
+                    <div class="course-highlights">
+                        <span class="highlight-tag">Hadoop</span>
+                        <span class="highlight-tag">Apache Spark</span>
+                        <span class="highlight-tag">NoSQL</span>
+                        <span class="highlight-tag">Data Lakes</span>
+                        <span class="highlight-tag">Cloud Computing</span>
+                        <span class="highlight-tag">Distributed Systems</span>
+                    </div>
+                </div>
+
+                <!-- Course 14 - NEW -->
+                <div class="course-card">
+                    <div class="status-badge status-current">In Progress</div>
+                    <div class="course-header">
+                        <div class="course-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <div class="course-info">
+                            <span class="course-code">COURSE 14</span>
+                            <h3 class="course-title">Data Warehouse & SQL</h3>
+                        </div>
+                    </div>
+                    <p class="course-description">
+                        Enterprise data warehousing architecture and advanced SQL for business intelligence. Dimensional modeling, star and snowflake schemas, OLAP operations, query optimization, indexing strategies, and building scalable data warehouse solutions.
+                    </p>
+                    <div class="course-highlights">
+                        <span class="highlight-tag">Data Warehousing</span>
+                        <span class="highlight-tag">SQL Optimization</span>
+                        <span class="highlight-tag">Dimensional Modeling</span>
+                        <span class="highlight-tag">OLAP</span>
+                        <span class="highlight-tag">ETL Design</span>
+                        <span class="highlight-tag">BI Architecture</span>
+                    </div>
+                </div>
+
+                <!-- Capstone - Coming Soon -->
+                <div class="course-card" style="border: 3px dashed rgba(102, 126, 234, 0.3);">
+                    <div class="status-badge" style="background: rgba(102, 126, 234, 0.2); color: var(--primary); border-color: rgba(102, 126, 234, 0.4);">Next</div>
+                    <div class="course-header">
+                        <div class="course-icon" style="background: var(--gradient-primary);">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="course-info">
+                            <span class="course-code">CAPSTONE</span>
+                            <h3 class="course-title">Capstone Project</h3>
+                        </div>
+                    </div>
+                    <p class="course-description">
+                        Culminating project synthesizing all learned concepts. Will develop comprehensive data science solution addressing real-world healthcare or biotech challenge, demonstrating mastery of end-to-end analytics pipeline from data acquisition to deployment.
+                    </p>
+                    <div class="course-highlights">
+                        <span class="highlight-tag">Applied Research</span>
+                        <span class="highlight-tag">Full-Stack Analytics</span>
+                        <span class="highlight-tag">Industry Impact</span>
+                        <span class="highlight-tag">End-to-End Pipeline</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="presentation-section">
-            <div class="presentation-container">
-                <img src="https://i.postimg.cc/26ZhfX52/Whats-App-Image-2025-03-28-at-18-52-22-51c733fb.jpg" alt="Academic Presentation" class="presentation-image">
+        <!-- Photo Gallery Section -->
+        <div class="gallery-section">
+            <div class="section-header">
+                <h2 class="section-title">Learning Experiences</h2>
+                <p class="section-description">
+                    Industry visits, presentations, and collaborative learning moments throughout my academic journey
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Existing Presentation Photo -->
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <img src="https://i.postimg.cc/26ZhfX52/Whats-App-Image-2025-03-28-at-18-52-22-51c733fb.jpg" alt="Academic Presentation" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                Presenting analytical insights to faculty and peers
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Academic Presentation</h3>
+                        <p class="gallery-description">
+                            Demonstrating advanced data visualization and communication skills through project presentation
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Placeholder for Allagash Brewing Company -->
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-industry"></i>
+                            <div class="photo-placeholder-text">
+                                <strong>Allagash Brewing Company Visit</strong><br>
+                                Portland, Maine - Add your group photo here
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Industry Visit - Allagash Brewing</h3>
+                        <p class="gallery-description">
+                            Explored data-driven operations and quality control in craft brewing industry, discussing analytics applications in manufacturing
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Placeholder for More Company Visits -->
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-building"></i>
+                            <div class="photo-placeholder-text">
+                                <strong>Company Visit</strong><br>
+                                Add photos from professional networking events
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Professional Networking</h3>
+                        <p class="gallery-description">
+                            Engaging with industry professionals to discuss real-world data challenges and career opportunities
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Placeholder for Lab/Project Work -->
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-laptop-code"></i>
+                            <div class="photo-placeholder-text">
+                                <strong>Team Project Work</strong><br>
+                                Add collaborative learning moments
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Collaborative Projects</h3>
+                        <p class="gallery-description">
+                            Working with peers on complex analytics challenges and machine learning implementations
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Placeholder for Presentations -->
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <div class="photo-placeholder-text">
+                                <strong>Workshop or Seminar</strong><br>
+                                Add photos from technical workshops
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Technical Workshops</h3>
+                        <p class="gallery-description">
+                            Participating in advanced analytics workshops and machine learning seminars
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Placeholder for Hackathons/Competitions -->
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-trophy"></i>
+                            <div class="photo-placeholder-text">
+                                <strong>Competitions & Events</strong><br>
+                                Add hackathon or competition photos
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Data Science Competitions</h3>
+                        <p class="gallery-description">
+                            Competing in data analytics challenges and showcasing innovative solutions
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="progress-section">
-            <h2 class="progress-title">Program Mastery</h2>
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <div class="progress-fill"></div>
-                </div>
-                <p class="progress-text">80% Complete - Expected Graduation: June 2026</p>
-            </div>
-            
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">10</div>
-                    <div class="stat-label">Courses Completed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">4.0</div>
-                    <div class="stat-label">GPA Excellence</div>
-                </div>
-            </div>
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 Vamshi Krishna Korutla | Master's in Data Analytics Engineering | Northeastern University</p>
         </div>
     </div>
 
     <script>
-        // Enhanced smooth scroll for back button
-        document.querySelector('.back-btn').addEventListener('click', function(e) {
+        // Smooth scroll for back button
+        document.querySelector('.back-button').addEventListener('click', function(e) {
             if (this.getAttribute('href').startsWith('#')) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -1027,105 +1372,108 @@
             }
         });
 
-        // Enhanced interactive hover effects
+        // Enhanced card interactions
         document.querySelectorAll('.course-card').forEach((card, index) => {
             card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-20px) scale(1.03)';
-                this.style.zIndex = '10';
+                this.style.transform = 'translateY(-15px) scale(1.02)';
                 
-                // Add subtle glow effect to neighboring cards
+                // Subtle effect on neighboring cards
                 document.querySelectorAll('.course-card').forEach((otherCard, otherIndex) => {
                     if (Math.abs(index - otherIndex) === 1) {
-                        otherCard.style.transform = 'translateY(-5px) scale(1.01)';
+                        otherCard.style.transform = 'translateY(-5px)';
                     }
                 });
             });
             
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
-                this.style.zIndex = '1';
                 
-                // Reset neighboring cards
                 document.querySelectorAll('.course-card').forEach(otherCard => {
-                    otherCard.style.transform = 'translateY(0) scale(1)';
+                    otherCard.style.transform = 'translateY(0)';
                 });
-            });
-
-            // Add click effect
-            card.addEventListener('click', function() {
-                this.style.transform = 'translateY(-25px) scale(1.05)';
-                setTimeout(() => {
-                    this.style.transform = 'translateY(-20px) scale(1.03)';
-                }, 150);
             });
         });
 
-        // Profile picture interaction
-        document.querySelector('.profile-picture').addEventListener('click', function() {
-            this.style.transform = 'scale(1.2) rotate(360deg)';
+        // Profile image rotation effect
+        document.querySelector('.profile-image').addEventListener('click', function() {
+            this.style.transform = 'scale(1.1) rotate(360deg)';
             setTimeout(() => {
                 this.style.transform = 'scale(1) rotate(0deg)';
             }, 600);
         });
 
-        // Progress bar animation trigger on scroll
-        const progressBar = document.querySelector('.progress-fill');
+        // Progress bar animation on scroll
+        const progressBar = document.querySelector('.progress-bar-fill');
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    progressBar.style.animationPlayState = 'running';
+                    progressBar.style.animation = 'progressAnimation 2s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(progressBar);
+
+        // Stat counter animation
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = progress * (end - start) + start;
+                element.textContent = Math.floor(value);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Animate stats when they come into view
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        const finalValue = parseFloat(stat.textContent);
+                        stat.textContent = '0';
+                        animateValue(stat, 0, finalValue, 2000);
+                    });
+                    statObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const statsSection = document.querySelector('.progress-stats');
+        if (statsSection) {
+            statObserver.observe(statsSection);
+        }
+
+        // Gallery image hover effects
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                const image = this.querySelector('.gallery-image');
+                if (image) {
+                    image.style.transform = 'scale(1.15)';
+                }
+            });
+
+            item.addEventListener('mouseleave', function() {
+                const image = this.querySelector('.gallery-image');
+                if (image) {
+                    image.style.transform = 'scale(1)';
                 }
             });
         });
-        observer.observe(progressBar);
 
-        // Dynamic particle system
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.style.cssText = `
-                position: absolute;
-                width: 4px;
-                height: 4px;
-                background: rgba(255, 255, 255, 0.6);
-                border-radius: 50%;
-                pointer-events: none;
-                animation: particleFloat 8s linear infinite;
-                left: ${Math.random() * 100}%;
-                top: 100%;
-                z-index: -1;
-            `;
-            
-            document.querySelector('.bg-animation').appendChild(particle);
-            
-            setTimeout(() => {
-                particle.remove();
-            }, 8000);
-        }
-
-        // Create particles periodically
-        setInterval(createParticle, 2000);
-
-        // Add CSS for particle animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes particleFloat {
-                0% {
-                    transform: translateY(0) rotate(0deg);
-                    opacity: 0;
-                }
-                10% {
-                    opacity: 1;
-                }
-                90% {
-                    opacity: 1;
-                }
-                100% {
-                    transform: translateY(-100vh) rotate(360deg);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
+        // Console message
+        console.log('%c🎓 Academic Excellence Portfolio', 'color: #667eea; font-size: 20px; font-weight: bold;');
+        console.log('%c95% Complete - Nearly there!', 'color: #43e97b; font-size: 14px;');
     </script>
 </body>
 </html>
