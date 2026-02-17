@@ -458,9 +458,34 @@
 
         .typing-text {
             display: inline-block;
-            border-right: 3px solid var(--primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: gradient-shift 3s ease infinite, typing-glow 2s ease-in-out infinite;
+            border-right: 3px solid;
+            border-image: linear-gradient(135deg, #667eea, #f093fb) 1;
             padding-right: 5px;
-            animation: blink 0.7s infinite;
+            font-weight: 800;
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes typing-glow {
+            0%, 100% {
+                filter: brightness(1) drop-shadow(0 0 5px rgba(102, 126, 234, 0.3));
+            }
+            50% {
+                filter: brightness(1.2) drop-shadow(0 0 15px rgba(102, 126, 234, 0.6));
+            }
         }
 
         @keyframes blink {
@@ -1802,11 +1827,11 @@
                 </div>
                 <div class="stats-grid">
                     <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-                        <div class="stat-number">3+</div>
+                        <div class="stat-number">5+</div>
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stat-number">21+</div>
+                        <div class="stat-number">50+</div>
                         <div class="stat-label">Projects Delivered</div>
                     </div>
                     <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
