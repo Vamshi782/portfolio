@@ -944,7 +944,8 @@
             transition: var(--transition);
         }
         .proj-card:hover .proj-overlay-text { transform: translateY(0); }
-        .proj-body { padding: 28px; }
+        .proj-body { padding: 28px; display: flex; flex-direction: column; }
+        .proj-desc { flex: 1; }
         .proj-cat {
             display: inline-flex;
             align-items: center;
@@ -1816,46 +1817,52 @@
             </div>
             <div class="projects-grid">
 
+                <!-- 1 — Meridian Financial Services -->
                 <div class="proj-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="proj-img">
-                        <img src="https://i.postimg.cc/8Cms8Bsj/school2.png" alt="Student Performance Analytics">
-                        <div class="proj-overlay"><div class="proj-overlay-text"><i class="fas fa-external-link-alt"></i> View Project</div></div>
+                        <img src="https://i.postimg.cc/wMv1Qyq3/analytics.png" alt="Meridian Financial Services Dashboard">
+                        <div class="proj-overlay"><div class="proj-overlay-text"><i class="fas fa-external-link-alt"></i> Live Dashboard</div></div>
                     </div>
                     <div class="proj-body">
-                        <div class="proj-cat"><i class="fas fa-school"></i> Education Analytics</div>
-                        <div class="proj-title">Student Performance Analytics System</div>
-                        <p class="proj-desc">Predictive models and automated dashboards to identify at-risk students and optimize intervention strategies using behavioral and academic data.</p>
+                        <div class="proj-cat"><i class="fas fa-landmark"></i> Financial Services BI</div>
+                        <div class="proj-title">Meridian — Consumer Lending Intelligence</div>
+                        <p class="proj-desc">Interactive lending dashboard tracking an $842M portfolio with live KPI cards, period filters, originations vs. deposit line chart, donut portfolio breakdown, and a 6-branch leaderboard with inline progress bars. Built to show exactly the interactivity financial services recruiters expect from a BI hire.</p>
                         <div class="proj-tools">
-                            <span class="proj-tool">Power BI</span>
-                            <span class="proj-tool">R</span>
-                            <span class="proj-tool">Predictive Modeling</span>
+                            <span class="proj-tool">JavaScript</span>
+                            <span class="proj-tool">Chart.js</span>
+                            <span class="proj-tool">HTML / CSS</span>
+                            <span class="proj-tool">Netlify</span>
                         </div>
-                        <a href="https://github.com/Vamshi782/School-Data-Analytics" target="_blank" class="proj-link">
-                            GitHub <i class="fas fa-arrow-right"></i>
+                        <a href="https://keen-pixie-1b69e4.netlify.app/" target="_blank" class="proj-link">
+                            Live Demo <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
 
+                <!-- 2 — Enterprise Analytics Platform -->
                 <div class="proj-card" data-aos="fade-up" data-aos-delay="150">
                     <div class="proj-img">
-                        <img src="https://i.postimg.cc/jqJcyQjP/Diabetes-share.jpg" alt="Diabetes ML Pipeline">
-                        <div class="proj-overlay"><div class="proj-overlay-text"><i class="fas fa-external-link-alt"></i> View Project</div></div>
+                        <img src="https://i.postimg.cc/j2wd5b1G/28e3e411-f9d6-42b0-bda3-1c5c2718021c.png" alt="Enterprise Analytics Platform">
+                        <div class="proj-overlay"><div class="proj-overlay-text"><i class="fas fa-external-link-alt"></i> Live Demo</div></div>
                     </div>
                     <div class="proj-body">
-                        <div class="proj-cat"><i class="fas fa-heartbeat"></i> Healthcare ML</div>
-                        <div class="proj-title">Diabetes Prediction ML Pipeline</div>
-                        <p class="proj-desc">Ensemble ML models achieving 94% accuracy with feature importance and interpretable risk prediction. Fully reproducible pipeline from EDA to deployment.</p>
+                        <div class="proj-cat"><i class="fas fa-chart-line"></i> Business Intelligence</div>
+                        <div class="proj-title">Enterprise Analytics Platform</div>
+                        <p class="proj-desc">Bloomberg-style executive platform with a live 13-metric scrolling ticker, animated KPI counters ($274M ARR, 2.4B rows), dual ETL pipeline flows (Salesforce→Snowflake and SAP→Redshift via dbt), AI forecast with confidence bands, and DAMA/DMBOK data quality scoring across five dimensions. Reduces manual analysis by 80%+ across Finance, Sales, Ops, and Product.</p>
                         <div class="proj-tools">
+                            <span class="proj-tool">Snowflake</span>
+                            <span class="proj-tool">dbt</span>
+                            <span class="proj-tool">Power BI</span>
                             <span class="proj-tool">Python</span>
-                            <span class="proj-tool">Scikit-learn</span>
-                            <span class="proj-tool">Feature Engineering</span>
+                            <span class="proj-tool">Claude AI</span>
                         </div>
-                        <a href="https://github.com/Vamshi782/diabetes-prediction-ml-project" target="_blank" class="proj-link">
-                            GitHub <i class="fas fa-arrow-right"></i>
+                        <a href="https://astounding-torrone-900f4f.netlify.app/" target="_blank" class="proj-link">
+                            Live Demo <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
 
+                <!-- 3 — Databricks Lakehouse -->
                 <div class="proj-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="proj-img">
                         <img src="https://i.postimg.cc/j5Wr6hhw/Icons-Website-1024x519.jpg" alt="Databricks Lakehouse Pipeline">
@@ -1864,11 +1871,12 @@
                     <div class="proj-body">
                         <div class="proj-cat"><i class="fas fa-database"></i> Data Engineering</div>
                         <div class="proj-title">Databricks Lakehouse Analytics Pipeline</div>
-                        <p class="proj-desc">Enterprise-scale medallion architecture (Bronze→Silver→Gold) using Databricks & Spark with incremental processing and optimized query performance.</p>
+                        <p class="proj-desc">Enterprise medallion architecture (Bronze→Silver→Gold) on Databricks with Apache Spark, Delta Lake, and incremental processing for high-volume data transformation at scale. Implements schema evolution, Z-ordering, and automated data quality checks at every layer to ensure downstream reporting reliability.</p>
                         <div class="proj-tools">
                             <span class="proj-tool">Databricks</span>
                             <span class="proj-tool">Apache Spark</span>
                             <span class="proj-tool">Delta Lake</span>
+                            <span class="proj-tool">Python</span>
                         </div>
                         <a href="https://github.com/Vamshi782/databricks-lakehouse-analytics-pipeline" target="_blank" class="proj-link">
                             GitHub <i class="fas fa-arrow-right"></i>
@@ -1876,56 +1884,69 @@
                     </div>
                 </div>
 
+                <!-- 4 — RAG Agent -->
                 <div class="proj-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="proj-img">
-                        <img src="https://i.postimg.cc/wMv1Qyq3/analytics.png" alt="Enterprise Analytics Platform">
+                        <img src="https://i.postimg.cc/d0Y7xLfd/Product-Analysis-Venn-Diagram.webp" alt="RAG Agent">
                         <div class="proj-overlay"><div class="proj-overlay-text"><i class="fas fa-external-link-alt"></i> View Project</div></div>
                     </div>
                     <div class="proj-body">
-                        <div class="proj-cat"><i class="fas fa-chart-line"></i> Business Intelligence</div>
-                        <div class="proj-title">Enterprise Analytics Platform</div>
-                        <p class="proj-desc">Executive dashboards and automated reporting pipelines to improve cross-functional visibility and accelerate strategic decision-making at scale.</p>
+                        <div class="proj-cat"><i class="fas fa-robot"></i> AI / LLM Engineering</div>
+                        <div class="proj-title">RAG Agent — Intelligent Document QA</div>
+                        <p class="proj-desc">Production-ready Retrieval-Augmented Generation agent built at a Google Cloud AI event, enabling intelligent Q&A over enterprise document corpora using vector embeddings, FAISS, and semantic search grounding. Demonstrates LangChain orchestration, Gemini integration, and advanced chunking strategies for accurate, hallucination-resistant responses.</p>
                         <div class="proj-tools">
-                            <span class="proj-tool">Tableau</span>
-                            <span class="proj-tool">SQL</span>
-                            <span class="proj-tool">ETL Automation</span>
+                            <span class="proj-tool">LangChain</span>
+                            <span class="proj-tool">Google Gemini</span>
+                            <span class="proj-tool">FAISS</span>
+                            <span class="proj-tool">Python</span>
                         </div>
+                        <a href="https://github.com/Vamshi782" target="_blank" class="proj-link">
+                            GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
+                <!-- 5 — Diabetes ML -->
                 <div class="proj-card" data-aos="fade-up" data-aos-delay="150">
                     <div class="proj-img">
-                        <img src="https://i.postimg.cc/d0Y7xLfd/Product-Analysis-Venn-Diagram.webp" alt="Product Analytics Framework">
+                        <img src="https://i.postimg.cc/jqJcyQjP/Diabetes-share.jpg" alt="Diabetes ML Pipeline">
                         <div class="proj-overlay"><div class="proj-overlay-text"><i class="fas fa-external-link-alt"></i> View Project</div></div>
                     </div>
                     <div class="proj-body">
-                        <div class="proj-cat"><i class="fas fa-rocket"></i> Product Analytics</div>
-                        <div class="proj-title">User Behavior & Growth Analytics Framework</div>
-                        <p class="proj-desc">KPI framework, funnel analysis, cohort retention models, and A/B experimentation dashboards designed to drive product growth and user engagement.</p>
+                        <div class="proj-cat"><i class="fas fa-heartbeat"></i> Machine Learning</div>
+                        <div class="proj-title">Diabetes Prediction ML Pipeline</div>
+                        <p class="proj-desc">End-to-end ensemble ML pipeline achieving 94% accuracy on clinical risk prediction with SHAP-based feature importance for interpretable, audit-ready healthcare decisions. Covers full lifecycle — EDA, feature engineering, cross-validation, model selection, and reproducible reporting aligned with clinical review standards.</p>
                         <div class="proj-tools">
-                            <span class="proj-tool">SQL</span>
                             <span class="proj-tool">Python</span>
-                            <span class="proj-tool">A/B Testing</span>
-                            <span class="proj-tool">Cohort Analysis</span>
+                            <span class="proj-tool">Scikit-learn</span>
+                            <span class="proj-tool">SHAP</span>
+                            <span class="proj-tool">Feature Engineering</span>
                         </div>
+                        <a href="https://github.com/Vamshi782/diabetes-prediction-ml-project" target="_blank" class="proj-link">
+                            GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
+                <!-- 6 — Student Performance -->
                 <div class="proj-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="proj-img">
-                        <img src="https://i.postimg.cc/j2wd5b1G/28e3e411-f9d6-42b0-bda3-1c5c2718021c.png" alt="Cloud Data Warehouse">
+                        <img src="https://i.postimg.cc/8Cms8Bsj/school2.png" alt="Student Performance Analytics">
                         <div class="proj-overlay"><div class="proj-overlay-text"><i class="fas fa-external-link-alt"></i> View Project</div></div>
                     </div>
                     <div class="proj-body">
-                        <div class="proj-cat"><i class="fas fa-cloud"></i> Cloud Data Platform</div>
-                        <div class="proj-title">Scalable Data Warehouse & KPI Automation</div>
-                        <p class="proj-desc">Modern cloud data warehouse integrating multi-source pipelines with automated validation, dbt metric stores, and executive-level Power BI reporting.</p>
+                        <div class="proj-cat"><i class="fas fa-school"></i> Education Analytics</div>
+                        <div class="proj-title">Student Performance Analytics System</div>
+                        <p class="proj-desc">Predictive modeling system combining behavioral, attendance, and academic data to identify at-risk students and surface targeted intervention recommendations via automated Power BI dashboards. Enables educators to act earlier and more precisely, translating raw institutional data into actionable student support decisions.</p>
                         <div class="proj-tools">
-                            <span class="proj-tool">Snowflake</span>
-                            <span class="proj-tool">dbt</span>
                             <span class="proj-tool">Power BI</span>
-                            <span class="proj-tool">Data Modeling</span>
+                            <span class="proj-tool">R</span>
+                            <span class="proj-tool">Predictive Modeling</span>
+                            <span class="proj-tool">SQL</span>
                         </div>
+                        <a href="https://github.com/Vamshi782/School-Data-Analytics" target="_blank" class="proj-link">
+                            GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
