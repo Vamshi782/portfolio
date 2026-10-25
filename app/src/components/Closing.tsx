@@ -1,4 +1,4 @@
-import { ArrowUpRight, FileText, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight, FileText, Handshake, Mail, MapPin } from "lucide-react";
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { profile } from "../data/content";
 import { Reveal, TiltCard } from "./ui";
@@ -47,6 +47,31 @@ export function Contact() {
                 <img src="/img/portrait.webp" alt="Vamshi Krishna Korutla" width={800} height={1000} loading="lazy" className="aspect-[4/5] w-full rounded-[1.25rem] object-cover" />
               </div>
             </TiltCard>
+          </div>
+        </div>
+      </Reveal>
+      <Reveal delay={0.1}>
+        <div className="glass relative mt-4 flex flex-col gap-5 overflow-hidden rounded-3xl p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+          <div aria-hidden className="absolute -left-16 top-0 h-48 w-48 rounded-full bg-neon-pink/15 blur-3xl" />
+          <div className="relative flex items-start gap-4">
+            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-neon-pink/30 bg-neon-pink/10 text-neon-pink">
+              <Handshake size={20} />
+            </span>
+            <div>
+              <p className="eyebrow !text-neon-pink/80">Creators, brands & community</p>
+              <h3 className="mt-1 text-lg font-medium text-white">Want to collaborate, partner, or share your story?</h3>
+              <p className="mt-1 max-w-xl text-sm text-slate-400">
+                For brand partnerships, story features and community collabs, reach my creator inbox or DM me on Instagram. Hiring? Use {profile.email} above.
+              </p>
+            </div>
+          </div>
+          <div className="relative flex shrink-0 flex-wrap gap-2">
+            <a href={`mailto:${profile.collabEmail}?subject=Collaboration`} className="inline-flex items-center gap-2 rounded-xl border border-neon-pink/40 bg-neon-pink/10 px-4 py-2.5 text-sm font-medium text-neon-pink transition hover:bg-neon-pink/20">
+              <Mail size={15} /> {profile.collabEmail}
+            </a>
+            <a href={profile.instagram} target="_blank" rel="noreferrer" className="glass inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm text-white">
+              <InstagramLogoIcon /> @vamshi.indianabroad
+            </a>
           </div>
         </div>
       </Reveal>
