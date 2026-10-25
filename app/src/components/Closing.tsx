@@ -1,49 +1,7 @@
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, FileText, Mail, MapPin, X } from "lucide-react";
+import { ArrowUpRight, FileText, Mail, MapPin } from "lucide-react";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { gallery, profile } from "../data/content";
-import { Reveal, SectionHeader, TiltCard } from "./ui";
-
-export function Gallery() {
-  const [zoom, setZoom] = useState<number | null>(null);
-  return (
-    <section id="life" className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6">
-      <SectionHeader
-        eyebrow="06 · Beyond the dashboard"
-        title={
-          <>
-            From India to <span className="text-gradient">Portland, Boston & SF.</span>
-          </>
-        }
-        sub="A few moments from the journey: graduating from Northeastern, the Roux Institute campus, and the community I built along the way."
-      />
-      <div className="columns-2 gap-4 md:columns-3 [&>*]:mb-4">
-        {gallery.map((g, i) => (
-          <Reveal key={g.src} delay={i * 0.05}>
-            <motion.button whileHover={{ scale: 1.02 }} onClick={() => setZoom(i)} className="group relative block w-full overflow-hidden rounded-2xl border border-white/10">
-              <img src={g.src} alt={g.caption} width={g.w} height={g.h} loading="lazy" className="w-full object-cover transition duration-700 group-hover:scale-105" />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-3 pt-10 text-left text-xs text-slate-200 opacity-90 transition group-hover:opacity-100">{g.caption}</div>
-            </motion.button>
-          </Reveal>
-        ))}
-      </div>
-      <AnimatePresence>
-        {zoom !== null && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[70] grid place-items-center bg-ink/90 p-4 backdrop-blur-lg" onClick={() => setZoom(null)}>
-            <button className="absolute right-5 top-5 rounded-full p-2 text-slate-300 hover:bg-white/10" aria-label="Close">
-              <X />
-            </button>
-            <motion.figure initial={{ scale: 0.94 }} animate={{ scale: 1 }} exit={{ scale: 0.94 }} className="max-h-[85vh] max-w-3xl">
-              <img src={gallery[zoom].src} alt={gallery[zoom].caption} className="max-h-[78vh] rounded-2xl object-contain" />
-              <figcaption className="mt-3 text-center text-sm text-slate-300">{gallery[zoom].caption}</figcaption>
-            </motion.figure>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </section>
-  );
-}
+import { profile } from "../data/content";
+import { Reveal, TiltCard } from "./ui";
 
 export function Contact() {
   return (

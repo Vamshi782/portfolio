@@ -6,7 +6,8 @@ import Bento, { Marquee } from "./components/Bento";
 import Projects from "./components/Projects";
 import { Experience, Founder } from "./components/Founder";
 import Terminal from "./components/Terminal";
-import { Contact, Gallery } from "./components/Closing";
+import { Contact } from "./components/Closing";
+import Gallery from "./components/Gallery";
 import { useMediaQuery } from "./hooks/useMediaQuery";
 import type { LensKey } from "./data/content";
 

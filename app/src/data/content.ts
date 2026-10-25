@@ -361,13 +361,27 @@ export const principles = [
   { title: "Community is a moat", text: "The best product ideas I've had came from listening to the ~45K people in my community." },
 ];
 
-export const gallery = [
-  { src: "/img/graduation.webp", caption: "Commencement, Northeastern University", w: 900, h: 1200 },
-  { src: "/img/roux.webp", caption: "The Roux Institute, Portland ME", w: 1400, h: 787 },
-  { src: "/img/community.webp", caption: "Namaste Cultural Community event", w: 1600, h: 1200 },
-  { src: "/img/graduation-flags.webp", caption: "Class of 2026", w: 900, h: 1200 },
-  { src: "/img/boston.webp", caption: "Day one in Boston", w: 1400, h: 933 },
-  { src: "/img/golden-gate.webp", caption: "San Francisco", w: 900, h: 1200 },
+export type Photo = { src: string; caption: string; place?: string; shape: "portrait" | "landscape" | "feature"; pos?: string };
+
+// Order matters: the grid packs densely, so the first four portraits form the top row.
+export const gallery: Photo[] = [
+  { src: "/img/graduation.webp", caption: "Commencement, M.S. Data Analytics", place: "Northeastern", shape: "portrait", pos: "50% 30%" },
+  { src: "/img/dallas.webp", caption: "Home base: Dallas–Fort Worth, at Texas Live!", place: "Dallas, TX", shape: "portrait", pos: "50% 40%" },
+  { src: "/img/google.webp", caption: "Visiting Google in Mountain View", place: "Mountain View, CA", shape: "portrait", pos: "50% 45%" },
+  { src: "/img/graduation-flags.webp", caption: "Class of 2026", place: "Northeastern", shape: "portrait", pos: "50% 30%" },
+  { src: "/img/community.webp", caption: "An event for the Namaste Cultural Community I founded", place: "Portland, ME", shape: "feature" },
+  { src: "/img/roux.webp", caption: "The Roux Institute, where I did my master's", place: "Portland, ME", shape: "landscape", pos: "55% 88%" },
+  { src: "/img/boston.webp", caption: "Arriving in Boston", place: "Boston, MA", shape: "landscape", pos: "50% 45%" },
+  { src: "/img/temple.webp", caption: "Staying close to my roots", shape: "portrait", pos: "40% 45%" },
+  { src: "/img/golden-gate.webp", caption: "Golden Gate weekend", place: "San Francisco, CA", shape: "portrait", pos: "50% 55%" },
+];
+
+export const route = [
+  { city: "India", note: "Bachelor's, then Deloitte" },
+  { city: "Portland, ME", note: "Master's at the Roux Institute" },
+  { city: "Boston, MA", note: "Northeastern University" },
+  { city: "Dallas, TX", note: "Home base today" },
+  { city: "Bay Area, CA", note: "SF & Mountain View" },
 ];
 
 export const education = [
