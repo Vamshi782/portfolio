@@ -73,8 +73,49 @@ export function Founder() {
         </div>
       </div>
 
+      <FailBetter />
       <Journey />
     </section>
+  );
+}
+
+const BECKETT = ["Ever tried.", "Ever failed.", "No matter.", "Try again.", "Fail again.", "Fail better."];
+
+// Beckett's line (credited) followed by Vamshi's own two-sentence add-on.
+function FailBetter() {
+  return (
+    <div className="glass relative mt-16 overflow-hidden rounded-3xl px-6 py-10 text-center sm:px-12 sm:py-14">
+      <div aria-hidden className="absolute -left-20 -top-24 h-64 w-64 rounded-full bg-neon-cyan/15 blur-3xl" />
+      <div aria-hidden className="absolute -bottom-24 -right-16 h-64 w-64 rounded-full bg-neon-amber/15 blur-3xl" />
+      <p className="relative flex flex-wrap justify-center gap-x-3 gap-y-1 text-2xl font-semibold tracking-tight sm:text-4xl">
+        {BECKETT.map((w, i) => (
+          <motion.span
+            key={w}
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ delay: i * 0.12, duration: 0.5 }}
+            className={i === BECKETT.length - 1 ? "text-gradient" : i < 3 ? "text-slate-400" : "text-white"}
+          >
+            {w}
+          </motion.span>
+        ))}
+      </p>
+      <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.8 }} className="relative mt-3 font-mono text-[11px] uppercase tracking-[0.25em] text-slate-500">
+        Samuel Beckett
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1.1, duration: 0.6 }}
+        className="relative mx-auto mt-6 max-w-xl text-lg text-slate-300 sm:text-xl"
+      >
+        The world is yours. Treat everyone kindly, and{" "}
+        <span className="font-medium text-neon-amber drop-shadow-[0_0_12px_rgba(251,191,36,0.6)]">light up the night</span>
+        <span aria-hidden> ✨</span>
+      </motion.p>
+    </div>
   );
 }
 
