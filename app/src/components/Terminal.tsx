@@ -34,7 +34,7 @@ function run(cmd: string): Line[] | "clear" {
       return [
         accent(profile.name),
         out("Data & business analyst with 5+ years at Deloitte, Cardinal Health and Solid Biosciences."),
-        out("Founder of KOGOS (~45K career community) and builder of InsightForge AI and InsightApply AI."),
+        out("Founder of KOGOS (~45K career community), 8,000+ LinkedIn connections, and builder of InsightForge AI and InsightApply AI."),
         out("M.S. Data Analytics, Northeastern University. Open to full-time roles across the US."),
       ];
     case "projects":

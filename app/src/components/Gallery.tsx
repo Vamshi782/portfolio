@@ -117,11 +117,12 @@ function StoryTile() {
             New city, new team, same habit: <span className="text-gradient">show up and build.</span>
           </p>
         </div>
-        <div className="relative mt-6 grid grid-cols-3 gap-2 text-center">
+        <div className="relative mt-6 grid grid-cols-2 gap-2 text-center sm:grid-cols-4">
           {[
             ["2", "countries"],
             ["5", "cities"],
             ["~45K", "community"],
+            ["8K+", "LinkedIn"],
           ].map(([v, l]) => (
             <div key={l} className="rounded-xl border border-white/10 bg-black/25 px-2 py-3">
               <div className="text-xl font-semibold text-white">{v}</div>

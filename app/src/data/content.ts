@@ -80,7 +80,7 @@ export const lenses: Record<
     pitch:
       "Four years at Deloitte partnering with business teams, plus a career community of ~45K people I support every week. I listen, find the real problem, and follow through.",
     proof: [
-      "Runs KOGOS, a career community of ~45K job seekers",
+      "Runs KOGOS, a career community of ~45K job seekers, with 8,000+ LinkedIn connections",
       "Founded the Namaste Cultural Community at Northeastern's Roux Institute",
       "Turned stakeholder pain points into requirements and fixes at Deloitte and Cardinal Health",
     ],
@@ -93,7 +93,7 @@ export const lenses: Record<
     pitch:
       "I grew KOGOS into a ~45K career community, launched products to real users, and I can speak to both the business buyer and the technical team.",
     proof: [
-      "Built a ~45K-person career community from zero as founder of KOGOS",
+      "Built a ~45K-person career community from zero as founder of KOGOS, plus 8,000+ LinkedIn connections and growing",
       "Pitched and launched PenExecutive, an executive ghost-writing studio",
       "Healthcare and life-sciences domain depth from Deloitte, Cardinal Health and Solid",
     ],

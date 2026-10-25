@@ -32,7 +32,7 @@ export function Contact() {
               </div>
               <div className="mt-4 flex gap-4 text-sm">
                 <a href={profile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white">
-                  <LinkedInLogoIcon /> LinkedIn <ArrowUpRight size={13} />
+                  <LinkedInLogoIcon /> LinkedIn · 8K+ <ArrowUpRight size={13} />
                 </a>
                 <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white">
                   <GitHubLogoIcon /> GitHub <ArrowUpRight size={13} />

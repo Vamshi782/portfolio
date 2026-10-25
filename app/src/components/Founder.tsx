@@ -35,7 +35,7 @@ export function Founder() {
                   <span className="mb-3 text-sm text-slate-400">people in the career community</span>
                 </div>
                 <p className="mt-4 max-w-md leading-relaxed text-slate-300">
-                  Students and early-career professionals who share openings, interview prep and job-search wins. I started it to give people the honest guidance I wished I had when I moved to the US.
+                  Students and early-career professionals who share openings, interview prep and job-search wins. I started it to give people the honest guidance I wished I had when I moved to the US. Plus 8,000+ LinkedIn connections, and growing.
                 </p>
                 <div className="mt-6 grid grid-cols-3 gap-3 text-center">
                   {[
