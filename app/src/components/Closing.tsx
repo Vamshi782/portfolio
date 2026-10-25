@@ -106,19 +106,28 @@ export function Contact() {
               <Handshake size={20} />
             </span>
             <div>
-              <p className="eyebrow !text-neon-pink/80">Creators, brands & community</p>
-              <h3 className="mt-1 text-lg font-medium text-white">Want to collaborate, partner, or share your story?</h3>
+              <p className="eyebrow !text-neon-pink/80">Community, creators & collabs</p>
+              <h3 className="mt-1 text-lg font-medium text-white">Want to build something together, or just exploring life, jobs, careers and learning?</h3>
               <p className="mt-1 max-w-xl text-sm text-slate-400">
-                For brand partnerships, story features and community collabs, reach my creator inbox or DM me on Instagram. Hiring? Use {profile.email} above.
+                Just send me a hi and I'll walk with you, buddy. Brand partnerships and story features welcome too. Hiring? Use {profile.email} above.
               </p>
             </div>
           </div>
           <div className="relative flex shrink-0 flex-wrap gap-2">
-            <a href={`mailto:${profile.collabEmail}?subject=Collaboration`} className="inline-flex items-center gap-2 rounded-xl border border-neon-pink/40 bg-neon-pink/10 px-4 py-2.5 text-sm font-medium text-neon-pink transition hover:bg-neon-pink/20">
+            <motion.a
+              href={profile.instagram}
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ scale: 1.04 }}
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-neon-pink to-neon-amber px-4 py-2.5 text-sm font-semibold text-ink"
+            >
+              <motion.span aria-hidden animate={{ rotate: [0, 18, -8, 18, 0] }} transition={{ duration: 1.6, repeat: Infinity, repeatDelay: 1.8 }} className="inline-block origin-[70%_70%]">
+                👋
+              </motion.span>
+              Say hi on Instagram
+            </motion.a>
+            <a href={`mailto:${profile.collabEmail}?subject=Hi%20Vamshi`} className="inline-flex items-center gap-2 rounded-xl border border-neon-pink/40 bg-neon-pink/10 px-4 py-2.5 text-sm font-medium text-neon-pink transition hover:bg-neon-pink/20">
               <Mail size={15} /> {profile.collabEmail}
-            </a>
-            <a href={profile.instagram} target="_blank" rel="noreferrer" className="glass inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm text-white">
-              <InstagramLogoIcon /> @vamshi.indianabroad
             </a>
           </div>
         </div>
