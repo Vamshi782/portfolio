@@ -1,7 +1,55 @@
+import { motion } from "framer-motion";
 import { ArrowUpRight, FileText, Handshake, Mail, MapPin } from "lucide-react";
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { profile } from "../data/content";
 import { Reveal, TiltCard } from "./ui";
+
+const TENSES = [
+  { word: "Explored.", cls: "text-slate-500" },
+  { word: "Exploring.", cls: "text-white" },
+  { word: "Will keep exploring.", cls: "text-gradient" },
+];
+
+// Three tenses reveal one after another, then the chill one-liner.
+export function Motto() {
+  return (
+    <section className="relative mx-auto max-w-5xl px-4 py-20 text-center sm:px-6 sm:py-28">
+      <div aria-hidden className="absolute left-1/2 top-1/2 h-72 w-[min(90%,44rem)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-neon-indigo/15 blur-3xl" />
+      <div className="relative space-y-1 sm:space-y-2">
+        {TENSES.map((t, i) => (
+          <motion.p
+            key={t.word}
+            initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true, margin: "-10% 0px" }}
+            transition={{ delay: i * 0.35, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className={`text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl ${t.cls}`}
+          >
+            {t.word}
+          </motion.p>
+        ))}
+      </div>
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1.2, duration: 0.6 }}
+        className="relative mx-auto mt-8 max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg"
+      >
+        Life's short, so I spend it building things that move people forward, and hunting down the best chai spot in every new city <span aria-hidden>☕</span>
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1.6 }}
+        className="relative mt-4 font-mono text-xs uppercase tracking-[0.3em] text-slate-500"
+      >
+        — Vamshi
+      </motion.p>
+    </section>
+  );
+}
 
 export function Contact() {
   return (
@@ -77,7 +125,7 @@ export function Contact() {
       </Reveal>
       <footer className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/5 pt-6 text-xs text-slate-500 sm:flex-row">
         <span>© {new Date().getFullYear()} Vamshi Krishna Korutla</span>
-        <span className="font-mono">Built with React · Three.js · Framer Motion · Tailwind</span>
+        <span className="font-mono">Life is short. Build what matters.</span>
       </footer>
     </section>
   );

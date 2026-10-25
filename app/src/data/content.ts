@@ -363,19 +363,24 @@ export const principles = [
   { title: "Community is a moat", text: "The best product ideas I've had came from listening to the ~45K people in my community." },
 ];
 
-export type Photo = { src: string; caption: string; place?: string; shape: "portrait" | "landscape" | "feature"; pos?: string };
+export type Photo = { src: string; caption: string; place?: string; shape: "portrait" | "landscape" | "feature"; pos?: string; featured?: boolean };
 
-// Order matters: the grid packs densely, so the first four portraits form the top row.
+// Featured photos are the only ones on the page (each proves one thing); the rest open in the viewer.
+// The grid packs densely: two portraits + the feature fill rows 1-2, two portraits + the story tile fill rows 3-4.
 export const gallery: Photo[] = [
-  { src: "/img/graduation.webp", caption: "Commencement, M.S. Data Analytics", place: "Northeastern", shape: "portrait", pos: "50% 30%" },
-  { src: "/img/dallas.webp", caption: "Home base: Dallas–Fort Worth, at Texas Live!", place: "Dallas, TX", shape: "portrait", pos: "50% 40%" },
-  { src: "/img/google.webp", caption: "Visiting Google in Mountain View", place: "Mountain View, CA", shape: "portrait", pos: "50% 45%" },
-  { src: "/img/graduation-flags.webp", caption: "Class of 2026", place: "Northeastern", shape: "portrait", pos: "50% 30%" },
-  { src: "/img/community.webp", caption: "An event for the Namaste Cultural Community I founded", place: "Portland, ME", shape: "feature" },
-  { src: "/img/roux.webp", caption: "The Roux Institute, where I did my master's", place: "Portland, ME", shape: "landscape", pos: "55% 88%" },
-  { src: "/img/boston.webp", caption: "Arriving in Boston", place: "Boston, MA", shape: "landscape", pos: "50% 45%" },
-  { src: "/img/temple.webp", caption: "Staying close to my roots", shape: "portrait", pos: "40% 45%" },
-  { src: "/img/golden-gate.webp", caption: "Golden Gate weekend", place: "San Francisco, CA", shape: "portrait", pos: "50% 55%" },
+  { src: "/img/graduation.webp", caption: "Commencement, M.S. Data Analytics", place: "Northeastern", shape: "portrait", pos: "50% 30%", featured: true },
+  { src: "/img/dallas.webp", caption: "Home base: Dallas–Fort Worth, at Texas Live!", place: "Dallas, TX", shape: "portrait", pos: "50% 40%", featured: true },
+  { src: "/img/diwali.webp", caption: "Diwali with the Namaste Cultural Community I founded", place: "Portland, ME", shape: "feature", featured: true },
+  { src: "/img/google.webp", caption: "Visiting Google in Mountain View", place: "Mountain View, CA", shape: "portrait", pos: "50% 45%", featured: true },
+  { src: "/img/boston-skyline.webp", caption: "Boston skyline from the harbor", place: "Boston, MA", shape: "portrait", pos: "50% 40%", featured: true },
+  { src: "/img/roux.webp", caption: "The Roux Institute, where I did my master's", place: "Portland, ME", shape: "landscape" },
+  { src: "/img/graduation-flags.webp", caption: "Class of 2026", place: "Northeastern", shape: "portrait" },
+  { src: "/img/lab.webp", caption: "In the lab", shape: "portrait" },
+  { src: "/img/boston.webp", caption: "Arriving in Boston", place: "Boston, MA", shape: "landscape" },
+  { src: "/img/sunset.webp", caption: "Golden hour by the water", shape: "portrait" },
+  { src: "/img/golden-gate.webp", caption: "Golden Gate weekend", place: "San Francisco, CA", shape: "portrait" },
+  { src: "/img/palace.webp", caption: "Palace of Fine Arts", place: "San Francisco, CA", shape: "portrait" },
+  { src: "/img/temple.webp", caption: "Staying close to my roots", shape: "portrait" },
 ];
 
 export const route = [

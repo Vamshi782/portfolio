@@ -102,7 +102,7 @@ function Tile({ p, i, onOpen }: { p: Photo; i: number; onOpen: () => void }) {
 function StoryTile() {
   return (
     <motion.div
-      className="col-span-2 row-span-2"
+      className="col-span-2 row-span-3 sm:row-span-2"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
@@ -138,6 +138,32 @@ function StoryTile() {
   );
 }
 
+const firstExtra = gallery.findIndex((p) => !p.featured);
+const extras = gallery.filter((p) => !p.featured);
+
+function MoreMoments({ onOpen }: { onOpen: () => void }) {
+  return (
+    <motion.button
+      onClick={onOpen}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="glass group mx-auto mt-6 flex w-fit items-center gap-4 rounded-full py-2 pl-2 pr-5"
+    >
+      <span className="flex -space-x-3">
+        {extras.slice(0, 5).map((p) => (
+          <img key={p.src} src={p.src} alt="" loading="lazy" className="h-9 w-9 rounded-full border-2 border-ink object-cover transition group-hover:scale-105" />
+        ))}
+      </span>
+      <span className="text-sm text-slate-200">
+        +{extras.length} more moments <ArrowRight size={14} className="ml-1 inline text-neon-cyan transition group-hover:translate-x-0.5" />
+      </span>
+    </motion.button>
+  );
+}
+
 export default function Gallery() {
   const [zoom, setZoom] = useState<number | null>(null);
   const step = useCallback((d: number) => setZoom((z) => (z === null ? z : (z + d + gallery.length) % gallery.length)), []);
@@ -168,11 +194,11 @@ export default function Gallery() {
       <Route />
 
       <div className="grid grid-flow-dense auto-rows-[150px] grid-cols-2 gap-3 sm:auto-rows-[190px] md:grid-cols-4 md:gap-4">
-        {gallery.map((p, i) => (
-          <Tile key={p.src} p={p} i={i} onOpen={() => setZoom(i)} />
-        ))}
+        {gallery.map((p, i) => p.featured && <Tile key={p.src} p={p} i={i} onOpen={() => setZoom(i)} />)}
         <StoryTile />
       </div>
+
+      <MoreMoments onOpen={() => setZoom(firstExtra)} />
 
       <AnimatePresence>
         {zoom !== null && (
