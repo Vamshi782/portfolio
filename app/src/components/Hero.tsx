@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, animate, motion, useInView } from "framer-motion";
 import { ArrowDown, Check, Copy, FileText, Mail, Sparkles } from "lucide-react";
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { lenses, profile, stats, type LensKey } from "../data/content";
 import { TiltCard } from "./ui";
 import { cn } from "../lib/cn";
@@ -129,6 +129,9 @@ export default function Hero({ lens, setLens }: { lens: LensKey; setLens: (l: Le
               </a>
               <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="rounded-lg p-2.5 text-slate-400 transition hover:bg-white/5 hover:text-white">
                 <GitHubLogoIcon width={18} height={18} />
+              </a>
+              <a href={profile.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="rounded-lg p-2.5 text-slate-400 transition hover:bg-white/5 hover:text-white">
+                <InstagramLogoIcon width={18} height={18} />
               </a>
             </div>
           </div>

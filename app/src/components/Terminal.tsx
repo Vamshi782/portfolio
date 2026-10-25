@@ -62,7 +62,7 @@ function run(cmd: string): Line[] | "clear" {
     case "education":
       return [...education.map((e) => out(`  ${e.degree}, ${e.school}`)), ...certifications.map((c) => out(`  ✦ ${c}`))];
     case "contact":
-      return [out(`  email     ${profile.email}`), out(`  linkedin  ${profile.linkedin}`), out(`  github    ${profile.github}`)];
+      return [out(`  email     ${profile.email}`), out(`  linkedin  ${profile.linkedin}`), out(`  github    ${profile.github}`), out(`  instagram ${profile.instagram}`)];
     case "resume":
     case "cv":
       window.open(profile.resume, "_blank", "noopener");

@@ -4,6 +4,7 @@ export const profile = {
   email: "korutla.vk@gmail.com",
   linkedin: "https://www.linkedin.com/in/vamshi-korutla",
   github: "https://github.com/Vamshi782",
+  instagram: "https://www.instagram.com/vamshi.indianabroad/",
   site: "https://vamshi-ai.me",
   resume: "/Vamshi_Korutla_Resume.pdf",
   tagline:

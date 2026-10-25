@@ -1,5 +1,5 @@
 import { ArrowUpRight, FileText, Mail, MapPin } from "lucide-react";
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { profile } from "../data/content";
 import { Reveal, TiltCard } from "./ui";
 
@@ -36,6 +36,9 @@ export function Contact() {
                 </a>
                 <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white">
                   <GitHubLogoIcon /> GitHub <ArrowUpRight size={13} />
+                </a>
+                <a href={profile.instagram} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white">
+                  <InstagramLogoIcon /> Instagram <ArrowUpRight size={13} />
                 </a>
               </div>
             </div>
