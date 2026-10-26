@@ -22,9 +22,9 @@ function CountUp({ value }: { value: string }) {
 }
 
 const FLOATERS = [
-  { text: "SQL · Snowflake · Power BI", cls: "-left-10 top-10", delay: 0 },
-  { text: "Founder · KOGOS ~45K", cls: "-right-8 top-1/3", delay: 0.8 },
-  { text: "4 AI products shipped", cls: "-left-6 bottom-16", delay: 1.6 },
+  { text: "SQL · Power BI · Tableau", cls: "-left-10 top-10", delay: 0 },
+  { text: "Ex-Deloitte · 4 yrs analytics", cls: "-right-8 top-1/3", delay: 0.8 },
+  { text: "Builder · 4 AI products", cls: "-left-6 bottom-16", delay: 1.6 },
 ];
 
 export default function Hero({ lens, setLens }: { lens: LensKey; setLens: (l: LensKey) => void }) {

@@ -31,7 +31,7 @@ export function Founder() {
                   <p className="eyebrow !text-neon-pink/80">KOGOS · Founder</p>
                 </div>
                 <div className="mt-6 flex items-end gap-3">
-                  <span className="text-7xl font-semibold tracking-tighter text-white sm:text-8xl">~45K</span>
+                  <span className="text-7xl font-semibold tracking-tighter text-white sm:text-8xl">44K+</span>
                   <span className="mb-3 text-sm text-slate-400">people in the career community</span>
                 </div>
                 <p className="mt-4 max-w-md leading-relaxed text-slate-300">
@@ -152,10 +152,10 @@ export function Experience() {
         eyebrow="04 · Experience"
         title={
           <>
-            Five years inside <span className="text-gradient">healthcare & biotech.</span>
+            Where I've <span className="text-gradient">done the work.</span>
           </>
         }
-        sub="Consulting, healthcare distribution and gene-therapy biotech: compliance-heavy places where the data has to be right."
+        sub="Consulting, enterprise analytics and process data: places where the numbers have to be right."
       />
       <div ref={ref} className="relative pl-8 sm:pl-12">
         <div aria-hidden className="absolute bottom-0 left-[11px] top-0 w-px bg-white/10 sm:left-[19px]" />

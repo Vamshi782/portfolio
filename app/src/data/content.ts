@@ -13,9 +13,9 @@ export const profile = {
 };
 
 export const stats = [
-  { value: "5+", label: "years in healthcare, biotech & consulting" },
-  { value: "35%", label: "reporting accuracy lift at Solid Biosciences" },
-  { value: "~45K", label: "people in the career community I run" },
+  { value: "4+", label: "years of full-time analytics at Deloitte" },
+  { value: "30%", label: "more accessible reporting on a Cardinal Health project" },
+  { value: "44K+", label: "people in the community I've built" },
   { value: "4", label: "AI products shipped as a founder" },
 ];
 
@@ -39,13 +39,13 @@ export const lenses: Record<
     label: "Data Analyst",
     headline: "Data & BI analyst who makes numbers trustworthy.",
     pitch:
-      "SQL on Snowflake and Azure, Power BI and Tableau dashboards executives actually use, and validation checks that catch bad data before it reaches a leader.",
+      "SQL on Azure and enterprise data, Power BI and Tableau dashboards executives actually use, and validation checks that catch bad data before it reaches a leader.",
     proof: [
-      "35% more accurate, 25% faster reporting at Solid Biosciences",
-      "30% better executive reporting access at Cardinal Health",
-      "25% fewer data inconsistencies across Deloitte healthcare datasets",
+      "Power BI on SQL and Azure data (Cardinal Health project): reporting 30% more accessible, 25% fewer inconsistencies",
+      "Analyzed 30+ process runs with Python, SQL and Power BI at Solid Biosciences",
+      "4 years of executive dashboards and KPI reporting at Deloitte across 10+ departments",
     ],
-    skills: ["SQL", "Snowflake", "Power BI", "Tableau", "Excel", "Azure", "Python (working)", "Streamlit"],
+    skills: ["SQL", "Power BI", "Tableau", "Excel", "Azure", "Python (working)", "Streamlit"],
     projects: ["insightforge", "energy", "lakehouse"],
   },
   product: {
@@ -55,7 +55,7 @@ export const lenses: Record<
       "I write the user story, the acceptance criteria and the UAT plan, then track the KPI after launch. As a founder I've taken four products from idea to live users.",
     proof: [
       "Shipped InsightForge AI, InsightApply AI, BubbleUp and PenExecutive end to end",
-      "Requirements → UAT → release ownership at Cardinal Health and Solid Biosciences",
+      "BRDs, FRDs, user stories, acceptance criteria and UAT on the Cardinal Health project",
       "Daily Jira/Confluence delivery with engineering teams at Deloitte",
     ],
     skills: ["User stories", "Acceptance criteria", "UAT", "KPI design", "Jira", "Confluence", "Prototyping", "GenAI"],
@@ -67,9 +67,9 @@ export const lenses: Record<
     pitch:
       "Business cases, ROI, root-cause analysis and KPI design. I find where time and money leak in a workflow and fix it with data and automation.",
     proof: [
-      "30% more efficient reporting through standardized SQL validation at Deloitte",
-      "Business cases and ROI analysis for tech-enabled process changes at Cardinal Health",
-      "20% better compliance readiness across healthcare reporting workflows",
+      "Executive scorecards and capacity insights for a 5,000+ bed client at Deloitte",
+      "Gap analysis and as-is/to-be process mapping on the Cardinal Health project",
+      "Copilot-assisted documentation that improved delivery timelines 20%",
     ],
     skills: ["Business cases", "ROI analysis", "Process mapping", "Root-cause analysis", "KPIs", "Exec presentations", "Automation"],
     projects: ["energy", "governance", "insightforge"],
@@ -78,24 +78,24 @@ export const lenses: Record<
     label: "Customer Success",
     headline: "Trusted translator between customers, data and product.",
     pitch:
-      "Four years at Deloitte partnering with business teams, plus a career community of ~45K people I support every week. I listen, find the real problem, and follow through.",
+      "Four years at Deloitte partnering with business teams, plus a community of 44K+ people I've built. I listen, find the real problem, and follow through.",
     proof: [
-      "Runs KOGOS, a career community of ~45K job seekers, with 8,000+ LinkedIn connections",
+      "Built a 44K+ community helping people study and work abroad, with 8,000+ LinkedIn connections",
       "Founded the Namaste Cultural Community at Northeastern's Roux Institute",
-      "Turned stakeholder pain points into requirements and fixes at Deloitte and Cardinal Health",
+      "Turned stakeholder pain points into requirements and fixes at Deloitte and on the Cardinal Health project",
     ],
     skills: ["Onboarding", "Stakeholder management", "Adoption metrics", "Training", "Escalation handling", "Community building"],
     projects: ["kogos", "insightapply", "bubbleup"],
   },
   bd: {
     label: "Sales / BD",
-    headline: "Founder who knows how to build an audience and a pipeline.",
+    headline: "Builder who knows how to grow an audience and a pipeline.",
     pitch:
-      "I grew KOGOS into a ~45K career community, launched products to real users, and I can speak to both the business buyer and the technical team.",
+      "I grew a 44K+ community, partner with study-abroad firms in India, launched products to real users, and can speak to both the business buyer and the technical team.",
     proof: [
-      "Built a ~45K-person career community from zero as founder of KOGOS, plus 8,000+ LinkedIn connections and growing",
+      "Grew a 44K+ community helping people study and work abroad, plus 8,000+ LinkedIn connections",
       "Pitched and launched PenExecutive, an executive ghost-writing studio",
-      "Healthcare and life-sciences domain depth from Deloitte, Cardinal Health and Solid",
+      "Partner with study-abroad firms in India to help students and professionals move abroad",
     ],
     skills: ["Audience building", "Positioning", "Discovery", "Business cases", "Partnerships", "Presenting"],
     projects: ["kogos", "penexec", "insightforge"],
@@ -230,16 +230,16 @@ print(f"Shiftable load: {shiftable.clip(lower=0).sum():.1f} kWh/day")`,
     name: "KOGOS",
     kind: "Founder · Career community",
     status: "Live",
-    blurb: "A career and study-abroad guidance brand with a community of ~45K job seekers.",
+    blurb: "A career and study-abroad guidance brand with a community of 44K+ job seekers.",
     overview: [
       "Started KOGOS to give students and early-career professionals the honest guidance I wished I had when moving to the US.",
-      "Grew it into a career community of roughly 45,000 people who share openings, interview prep and job-search wins.",
+      "Grew it into a career community of roughly 44,000 people who share openings, interview prep and job-search wins.",
       "It's also where I test what I build for job seekers, like InsightApply AI.",
     ],
     stack: ["Community building", "Content", "Partnerships", "Web (kogos.co)"],
     log: [
       "launch · kogos.co guidance site",
-      "grow   · community to ~45K members",
+      "grow   · community to 44K+ members",
       "build  · tools for members (InsightApply AI)",
     ],
     link: "https://kogos.co",
@@ -304,55 +304,56 @@ export const moreBuilds = [
 
 export const experience = [
   {
-    company: "Feasto Solutions LLC",
-    role: "AI Business Analyst Intern",
+    company: "Feasto Solutions",
+    role: "AI Business Analyst · Part-time",
     dates: "Sep 2026 – Present",
     points: [
-      "Translate AI-enabled business processes into BRDs, process maps, data requirements and human-review points.",
+      "Translate AI use cases into business requirements, process maps, data requirements and human-review checkpoints.",
       "Document data-quality dependencies, ownership, controls and monitoring needs so leaders can evaluate AI opportunities with evidence.",
+      "Turn technical AI concepts into clear recommendations for non-technical stakeholders.",
     ],
-    tags: ["AI use cases", "BRDs", "Governance"],
+    tags: ["AI use cases", "Requirements", "Governance"],
   },
   {
     company: "Solid Biosciences",
-    role: "Business Analyst",
-    dates: "Jul 2025 – Jan 2026",
+    role: "Process Development Co-op · Data Analytics",
+    dates: "Jul 2025 – Dec 2025",
     points: [
-      "Built Power BI and SQL validation/reporting workflows: reporting accuracy up 35%, turnaround time down 25%.",
-      "Data SME in a compliance-driven biotech: business logic, acceptance criteria and UAT evidence for traceable workflows.",
-      "Applied Generative AI to requirements, meeting summaries and reporting automation with human review.",
+      "Analyzed 30+ process runs across multiple vessels to support data-driven decisions.",
+      "Built Python, SQL, Excel and Power BI workflows to clean, validate, reconcile and visualize high-frequency process data.",
+      "Delivered dashboards, trend reports and side-by-side comparisons, plus SOP-style guides that made the analysis repeatable.",
     ],
-    tags: ["+35% accuracy", "−25% turnaround", "Biotech"],
+    tags: ["30+ runs analyzed", "Python · SQL · Power BI", "Co-op"],
   },
   {
     company: "Cardinal Health",
-    role: "Business Intelligence Analyst",
+    role: "Business Analyst / BIA · Volunteer project",
     dates: "Jan 2025 – Jul 2025",
     points: [
-      "SQL and Power BI reporting on Snowflake and Azure: executive reporting access up 30%, inconsistencies down 25%.",
-      "Business cases and ROI analysis for technology-enabled process improvements; Copilot for documentation automation.",
-      "Gap analysis, traceability, UAT and defect tracking from requirement to deployment.",
+      "Gathered requirements with product owners, business and technical teams; wrote BRDs, FRDs, user stories and acceptance criteria.",
+      "Built Power BI dashboards on SQL and Azure data with validation and reconciliation checks: reporting 30% more accessible, 25% fewer data inconsistencies.",
+      "Gap analysis, traceability, process mapping, UAT and defect tracking in Jira/Confluence; Copilot-assisted documentation improved delivery timelines 20%.",
     ],
-    tags: ["+30% access", "Snowflake", "Healthcare"],
+    tags: ["+30% accessibility", "−25% inconsistencies", "Agile"],
   },
   {
     company: "Deloitte",
-    role: "Operational Analyst – Healthcare",
+    role: "Operations Analyst · Full-time",
     dates: "May 2020 – Jul 2024",
     points: [
-      "Standardized SQL validation and Power BI reporting: 30% more efficient reporting, 25% fewer data inconsistencies.",
-      "Root-cause analysis, requirements, Agile delivery and UAT with business and technology teams in Jira/Confluence.",
-      "Governance artifacts and data dictionaries that improved compliance readiness by 20%.",
+      "Delivered executive dashboards, KPI reports and operational scorecards for a large client organization (5,000+ beds).",
+      "Partnered with 10+ departments and technical teams to gather requirements, standardize metric definitions and validate data.",
+      "Ran trend monitoring, variance checks and workflow assessments that helped leaders find bottlenecks and improve reporting accuracy.",
     ],
-    tags: ["+30% efficiency", "4 years", "Consulting"],
+    tags: ["4 years", "10+ departments", "Executive reporting"],
   },
 ];
 
 export const journey = [
   { year: "2020", title: "Deloitte, healthcare practice", text: "Four years learning how big organizations really run, and how often their data disagrees with itself." },
   { year: "2024", title: "Moved to the US for my master's", text: "M.S. Data Analytics at Northeastern's Roux Institute in Portland, Maine. Founded the Namaste Cultural Community there." },
-  { year: "2025", title: "Cardinal Health → Solid Biosciences", text: "BI and business analysis in healthcare distribution and gene-therapy biotech." },
-  { year: "2025+", title: "Started building", text: "KOGOS grew into a ~45K career community. Shipped InsightForge AI, InsightApply AI, BubbleUp and PenExecutive." },
+  { year: "2025", title: "Cardinal Health → Solid Biosciences", text: "Business analysis on a Cardinal Health volunteer project, then data analytics as a process development co-op at Solid Biosciences." },
+  { year: "2025+", title: "Started building", text: "KOGOS grew into a 44K+ career community. Shipped InsightForge AI, InsightApply AI, BubbleUp and PenExecutive." },
   { year: "Next", title: "Your team?", text: "A role where I own real business problems end to end, with the speed and ownership of a founder." },
 ];
 
@@ -360,7 +361,7 @@ export const principles = [
   { title: "Trust the data last", text: "Validate, reconcile, then visualize. A pretty chart on bad data is worse than no chart." },
   { title: "Ship, then sharpen", text: "Get a working version in front of real users this week; polish what they actually use." },
   { title: "AI with a human in the loop", text: "I use Claude, ChatGPT and Copilot daily, and I always review what they produce." },
-  { title: "Community is a moat", text: "Building for the ~45K people in my community keeps me close to real problems." },
+  { title: "Community is a moat", text: "Building for the 44K+ people in my community keeps me close to real problems." },
 ];
 
 export type Photo = { src: string; caption: string; place?: string; shape: "portrait" | "landscape" | "feature"; pos?: string; featured?: boolean };
@@ -397,6 +398,6 @@ export const education = [
 ];
 
 export const certifications = [
-  "Google Advanced Data Analytics Professional Certificate",
-  "AWS Certified Solutions Architect – Associate",
+  "Google Data Analytics Professional Certificate",
+  "Analytics with Python · Northeastern University",
 ];

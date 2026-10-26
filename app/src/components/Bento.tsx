@@ -7,12 +7,9 @@ import { certifications, companies, education } from "../data/content";
 import { Chip, Reveal, SectionHeader, SpotlightCard } from "./ui";
 
 const IMPACT = [
-  { name: "Reporting accuracy", where: "Solid Biosciences", v: 35 },
-  { name: "Exec reporting access", where: "Cardinal Health", v: 30 },
-  { name: "Reporting efficiency", where: "Deloitte", v: 30 },
-  { name: "Turnaround time ↓", where: "Solid Biosciences", v: 25 },
-  { name: "Data inconsistencies ↓", where: "Cardinal Health · Deloitte", v: 25 },
-  { name: "Compliance readiness", where: "Deloitte", v: 20 },
+  { name: "Reporting accessibility", where: "Cardinal Health project", v: 30 },
+  { name: "Data inconsistencies ↓", where: "Cardinal Health project", v: 25 },
+  { name: "Delivery timelines", where: "Cardinal Health project", v: 20 },
 ];
 const BAR_COLORS = ["#22d3ee", "#38bdf8", "#818cf8", "#a78bfa", "#34d399", "#6ee7b7"];
 
@@ -21,7 +18,7 @@ SELECT r.region,
        SUM(s.amount)                 AS source_total,
        SUM(r.amount)                 AS report_total,
        SUM(s.amount) - SUM(r.amount) AS variance
-FROM   snowflake.ops.source_txn s
+FROM   warehouse.ops.source_txn s
 JOIN   bi.exec_report r USING (txn_id)
 GROUP  BY r.region
 HAVING ABS(SUM(s.amount) - SUM(r.amount)) > 0;`;
@@ -56,7 +53,7 @@ function ImpactTooltip({ active, payload }: { active?: boolean; payload?: { payl
 }
 
 const CAPS = [
-  { icon: BarChart3, title: "Data & BI", items: ["SQL", "Snowflake", "Azure", "Power BI", "Tableau", "Excel", "Python (working)", "Streamlit"] },
+  { icon: BarChart3, title: "Data & BI", items: ["SQL", "Azure", "Power BI", "Tableau", "Excel", "Python (working)", "Streamlit"] },
   { icon: Target, title: "Product & Analysis", items: ["User stories", "Acceptance criteria", "UAT", "BRD / FRD", "Process maps", "Jira", "Confluence"] },
   { icon: Workflow, title: "Strategy & Ops", items: ["Business cases", "ROI", "KPI design", "Root cause", "Exec reporting", "Automation"] },
   { icon: ShieldCheck, title: "AI Governance", items: ["NIST AI RMF", "ISO/IEC 42001", "EU AI Act", "Risk tiering", "Human oversight", "Audit evidence"] },
@@ -76,7 +73,7 @@ export default function Bento() {
             Analyst rigor, <span className="text-gradient">founder speed.</span>
           </>
         }
-        sub="Five years making healthcare and biotech data trustworthy, plus the habit of shipping my own products. Every number below is from real work."
+        sub="Four years at Deloitte and hands-on projects since, making data trustworthy, plus the habit of shipping my own products. Every number below is from real work."
       />
 
       <div className="grid auto-rows-[minmax(180px,auto)] grid-cols-1 gap-4 md:grid-cols-4">
@@ -89,13 +86,13 @@ export default function Bento() {
               </div>
               <Activity className="text-neon-cyan" size={20} />
             </div>
-            <div className="mt-4 min-h-[300px] flex-1">
-              <ResponsiveContainer width="100%" height={300}>
+            <div className="mt-4 min-h-[220px] flex-1">
+              <ResponsiveContainer width="100%" height={220}>
                 <BarChart data={IMPACT} layout="vertical" margin={{ left: 0, right: 36, top: 4, bottom: 4 }}>
                   <XAxis type="number" domain={[0, 40]} hide />
                   <YAxis type="category" dataKey="name" width={128} tick={{ fill: "#94a3b8", fontSize: 11 }} axisLine={false} tickLine={false} />
                   <Tooltip cursor={{ fill: "rgba(255,255,255,0.03)" }} content={<ImpactTooltip />} />
-                  <Bar dataKey="v" radius={[0, 8, 8, 0]} barSize={18} label={{ position: "right", fill: "#e2e8f0", fontSize: 12, formatter: (v: number) => `${v}%` }}>
+                  <Bar dataKey="v" radius={[0, 8, 8, 0]} barSize={26} label={{ position: "right", fill: "#e2e8f0", fontSize: 12, formatter: (v: number) => `${v}%` }}>
                     {IMPACT.map((_, i) => (
                       <Cell key={i} fill={BAR_COLORS[i]} />
                     ))}

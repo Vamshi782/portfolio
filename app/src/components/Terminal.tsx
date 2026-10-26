@@ -33,8 +33,8 @@ function run(cmd: string): Line[] | "clear" {
     case "whoami":
       return [
         accent(profile.name),
-        out("Data & business analyst with 5+ years at Deloitte, Cardinal Health and Solid Biosciences."),
-        out("Founder of KOGOS (~45K career community), 8,000+ LinkedIn connections, and builder of InsightForge AI and InsightApply AI."),
+        out("Business & data analyst: 4 years at Deloitte, plus projects with Cardinal Health and Solid Biosciences."),
+        out("Builder of InsightForge AI and InsightApply AI; grew a 44K+ community; 8,000+ LinkedIn connections."),
         out("M.S. Data Analytics, Northeastern University. Open to full-time roles across the US."),
       ];
     case "projects":
@@ -52,7 +52,7 @@ function run(cmd: string): Line[] | "clear" {
       return experience.map((e) => out(`  ${e.dates.padEnd(20)} ${e.role}, ${e.company}`));
     case "skills":
       return [
-        out("  data      SQL · Snowflake · Azure · Power BI · Tableau · Excel · Python (working) · Streamlit"),
+        out("  data      SQL · Azure · Power BI · Tableau · Excel · Python (working) · Streamlit"),
         out("  product   user stories · acceptance criteria · UAT · Jira · Confluence · KPI design"),
         out("  ops       business cases · ROI · process mapping · root cause · exec reporting"),
         out("  ai        Claude · ChatGPT · Copilot · Gemini · NIST AI RMF · ISO/IEC 42001"),

@@ -121,7 +121,7 @@ function StoryTile() {
           {[
             ["2", "countries"],
             ["5", "cities"],
-            ["~45K", "community"],
+            ["44K+", "community"],
             ["8K+", "LinkedIn"],
           ].map(([v, l]) => (
             <div key={l} className="rounded-xl border border-white/10 bg-black/25 px-2 py-3">
