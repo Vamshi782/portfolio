@@ -160,7 +160,7 @@ HAVING null_pct > 5;   -- flag before we visualize`,
     blurb: "An AI job-application copilot that tailors a resume and answers to each job description.",
     overview: [
       "Paste a job description and the app maps it to your real experience, highlights the gaps honestly and drafts tailored answers.",
-      "Built after watching thousands of people in my career community struggle with the same applications.",
+      "Built for the same job seekers I support through my career community.",
       "Human-in-the-loop by design: the user reviews every line before it goes anywhere.",
     ],
     stack: ["Next.js", "TypeScript", "Claude API", "Prompt engineering", "Vercel"],
@@ -234,7 +234,7 @@ print(f"Shiftable load: {shiftable.clip(lower=0).sum():.1f} kWh/day")`,
     overview: [
       "Started KOGOS to give students and early-career professionals the honest guidance I wished I had when moving to the US.",
       "Grew it into a career community of roughly 45,000 people who share openings, interview prep and job-search wins.",
-      "It's also my product lab: InsightApply AI came straight out of questions this community asked every day.",
+      "It's also where I test what I build for job seekers, like InsightApply AI.",
     ],
     stack: ["Community building", "Content", "Partnerships", "Web (kogos.co)"],
     log: [
@@ -360,7 +360,7 @@ export const principles = [
   { title: "Trust the data last", text: "Validate, reconcile, then visualize. A pretty chart on bad data is worse than no chart." },
   { title: "Ship, then sharpen", text: "Get a working version in front of real users this week; polish what they actually use." },
   { title: "AI with a human in the loop", text: "I use Claude, ChatGPT and Copilot daily, and I always review what they produce." },
-  { title: "Community is a moat", text: "The best product ideas I've had came from listening to the ~45K people in my community." },
+  { title: "Community is a moat", text: "Building for the ~45K people in my community keeps me close to real problems." },
 ];
 
 export type Photo = { src: string; caption: string; place?: string; shape: "portrait" | "landscape" | "feature"; pos?: string; featured?: boolean };
