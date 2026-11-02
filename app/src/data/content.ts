@@ -16,7 +16,7 @@ export const stats = [
   { value: "4+", label: "years of full-time analytics at Deloitte" },
   { value: "30%", label: "more accessible reporting on a Cardinal Health project" },
   { value: "44K+", label: "people in the community I've built" },
-  { value: "4", label: "AI products shipped as a founder" },
+  { value: "5", label: "AI products shipped as a founder" },
 ];
 
 export const companies = [
@@ -46,20 +46,20 @@ export const lenses: Record<
       "4 years of executive dashboards and KPI reporting at Deloitte across 10+ departments",
     ],
     skills: ["SQL", "Power BI", "Tableau", "Excel", "Azure", "Python (working)", "Streamlit"],
-    projects: ["insightforge", "energy", "lakehouse"],
+    projects: ["sthira", "insightforge", "energy", "lakehouse"],
   },
   product: {
     label: "Product",
     headline: "Product-minded analyst who has shipped his own apps.",
     pitch:
-      "I write the user story, the acceptance criteria and the UAT plan, then track the KPI after launch. As a founder I've taken four products from idea to live users.",
+      "I write the user story, the acceptance criteria and the UAT plan, then track the KPI after launch. As a founder I've taken five products from idea to live users.",
     proof: [
-      "Shipped InsightForge AI, InsightApply AI, BubbleUp and PenExecutive end to end",
+      "Shipped Sthira, InsightForge AI, InsightApply AI, BubbleUp and PenExecutive end to end",
       "BRDs, FRDs, user stories, acceptance criteria and UAT on the Cardinal Health project",
       "Daily Jira/Confluence delivery with engineering teams at Deloitte",
     ],
     skills: ["User stories", "Acceptance criteria", "UAT", "KPI design", "Jira", "Confluence", "Prototyping", "GenAI"],
-    projects: ["insightapply", "bubbleup", "insightforge"],
+    projects: ["sthira", "insightapply", "bubbleup", "insightforge"],
   },
   ops: {
     label: "Strategy & Ops",
@@ -72,7 +72,7 @@ export const lenses: Record<
       "Copilot-assisted documentation that improved delivery timelines 20%",
     ],
     skills: ["Business cases", "ROI analysis", "Process mapping", "Root-cause analysis", "KPIs", "Exec presentations", "Automation"],
-    projects: ["energy", "governance", "insightforge"],
+    projects: ["sthira", "energy", "governance", "insightforge"],
   },
   cs: {
     label: "Customer Success",
@@ -118,6 +118,30 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    id: "sthira",
+    name: "Sthira",
+    kind: "Personal project · Digital health",
+    status: "Live",
+    blurb: "A GLP-1 companion app I built after the data showed a gap: nobody helped people when insurance stopped paying.",
+    overview: [
+      "The gap: I analyzed 1,802 App Store reviews of GLP-1 apps plus national surveys. 56% of people say the medicine is hard to afford, 75% get stomach side effects, and no app helped when an employer dropped coverage.",
+      "What I built: dose reminders and injection-site rotation, missed-dose help from each medicine's FDA label, protein-first meal logging from a photo, side-effect tips with clear \"call your doctor\" signs, and a free coverage check.",
+      "The whole app, its emails and its free guides work in English and Spanish. It never gives dose advice, and every target cites its source.",
+      "Why it matters to a healthcare team: the same instinct I used for 4 years at Deloitte. Read the data, find where patients fall through, and build the fix.",
+    ],
+    stack: ["Next.js", "TypeScript", "Postgres + Drizzle", "Claude API", "Stripe", "Capacitor (iPhone + Android)", "Vitest + Playwright (243 tests)"],
+    log: [
+      "research · 1,802 GLP-1 app reviews + national surveys",
+      "feat     · free coverage check, letters and call scripts",
+      "feat     · missed-dose help from each medicine's FDA label",
+      "feat     · protein-first meal logging from a photo (Claude)",
+      "feat     · the whole app in Spanish",
+      "ship     · live at sthirahealth.org",
+    ],
+    link: "https://sthirahealth.org",
+    accent: "emerald",
+  },
   {
     id: "insightforge",
     name: "InsightForge AI",
@@ -177,7 +201,7 @@ HAVING null_pct > 5;   -- flag before we visualize`,
     id: "bubbleup",
     name: "BubbleUp",
     kind: "Founder · EdTech app",
-    status: "Private beta",
+    status: "Live",
     blurb: "A phone-first prep app for India's NEET medical entrance: daily practice, full mocks and a coach view.",
     overview: [
       "2,880 original practice questions across 80 chapters in 4 difficulty levels, plus 1,600 swipe-style revision cards.",
@@ -190,8 +214,9 @@ HAVING null_pct > 5;   -- flag before we visualize`,
       "feat    · swipe cards + spaced revision",
       "feat    · mock tests with OMR scorer",
       "feat    · coach dashboard with weak-topic heatmap",
-      "beta    · private beta, in daily use",
+      "ship    · live and free at bubbleup.page",
     ],
+    link: "https://bubbleup.page",
     accent: "emerald",
   },
   {
