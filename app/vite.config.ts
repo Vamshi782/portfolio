@@ -7,7 +7,7 @@ import autoprefixer from "autoprefixer";
 const here = (p: string) => fileURLToPath(new URL(p, import.meta.url));
 
 // `npm run build` writes to dist/, then scripts/publish-root.mjs copies it to the repo
-// root, which GitHub Pages serves at vamshi-ai.me (CNAME and coursework.html stay put).
+// root, which Vercel serves at vamshi-korutla.vercel.app (CNAME and coursework.html stay put).
 export default defineConfig({
   root: here("."),
   plugins: [react()],

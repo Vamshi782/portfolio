@@ -1,0 +1,7 @@
+# Vercel serves the built site from the repo root as static files; the source lives in app/.
+app
+.claude
+README.md
+CNAME
+.env*
+.vercel

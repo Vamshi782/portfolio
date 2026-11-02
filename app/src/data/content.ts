@@ -6,7 +6,7 @@ export const profile = {
   github: "https://github.com/Vamshi782",
   instagram: "https://www.instagram.com/vamshi.indianabroad/",
   collabEmail: "vamshi.indianabroad@gmail.com",
-  site: "https://vamshi-ai.me",
+  site: "https://vamshi-korutla.vercel.app",
   resume: "/Vamshi_Korutla_Resume.pdf",
   tagline:
     "Analyst by training, founder by instinct. I turn messy operational data into decisions leaders trust, and I ship AI products on the side.",
